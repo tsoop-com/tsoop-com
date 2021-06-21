@@ -1,0 +1,55 @@
+{
+  "name": "www.tsoop.ru",
+  "version": "1.0.0",
+  "description": "tsoop web site",
+  "main": "index.js",
+  "keywords": [
+    "tsoop",
+    "music",
+    "electronic",
+    "improvisation",
+    "jams",
+    "op-z",
+    "op-1",
+    "nts-1"
+  ],
+  "author": "davay",
+  "license": "ISC",
+  "scripts": {
+    "dev": "vitepress dev ",
+    "build": "vitepress build ",
+    "serve": "vitepress serve ",
+    "deploy": "sh deploy.sh"
+  },
+  "dependencies": {
+    "@vueuse/core": "5.0.3",
+    "@vueuse/gesture": "^1.0.0",
+    "@vueuse/motion": "^1.5.6",
+    "chromatone-theory": "1.3.3",
+    "colord": "^2.0.1",
+    "hidpi-canvas": "^1.0.10",
+    "matter-js": "^0.17.1",
+    "paper": "^0.12.15",
+    "poly-decomp": "^0.3.0",
+    "tone": "^14.8.26",
+    "vue": "^3.1.1",
+    "webmidi": "^3.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.359",
+    "markdown-it-classy": "^0.2.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-external-links": "^0.0.6",
+    "patch-vue-directive-ssr": "^0.0.1",
+    "pug": "3.0.2",
+    "typescript": "^4.3.4",
+    "vite": "^2.3.8",
+    "vite-aliases": "0.8.2",
+    "vite-plugin-components": "^0.11.2",
+    "vite-plugin-icons": "^0.6.3",
+    "vite-plugin-windicss": "^1.0.4",
+    "vitepress": "0.15.4",
+    "vitepress-tags": "^0.4.0",
+    "windicss": "3.1.3"
+  }
+}
