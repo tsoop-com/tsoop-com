@@ -1,6 +1,6 @@
 <template lang="pug">
 .flex.flex-col.items-center 
-  .text-2xl {{ site.title }}
+  .text-2xl.mt-16.mb-8 {{ site.title }}
   z-logo
   content
 </template>
