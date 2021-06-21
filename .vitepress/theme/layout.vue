@@ -1,12 +1,15 @@
 <template lang="pug">
-p hello
+.flex.flex-col.items-center 
+  .text-2xl {{ site.title }}
+  z-logo
+  content
 </template>
 
 <script setup>
+import { useData } from 'vitepress'
 import { defineProps } from 'vue'
-const props = defineProps({
 
-});
+const { site } = useData()
 </script>
 
 <style scoped>
