@@ -2,10 +2,10 @@
 .flex.flex-wrap.bg-dark-900.bg-cover.bg-no-repeat(
   style="background-image: url(/saturn.jpg)"
 )
-  .flex-1.p-32
+  .flex-1.p-32.min-w-md
     img.bounce(src="/cassini.png")
-  .flex-1.p-16.flex.flex-col.items-center
-    .bandcamp
+  .flex-1.p-16.flex.flex-col.items-center.justify-center.min-w-lg
+    .bandcamp.w-full
       iframe(style="border: 0; width: 100%; height: 373px;", src="https://bandcamp.com/EmbeddedPlayer/album=3099555767/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/", seamless) <a href="https://tsoop.bandcamp.com/album/cassini-dreams">cassini dreams by tsoop</a>
     links.text-3xl.py-8(:links="album.links")
 </template>
