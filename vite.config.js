@@ -38,7 +38,7 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    include: ['vue', '@vueuse/core', 'tone', 'three', 'gsap'],
+    include: ['vue', '@vueuse/core', 'three', 'gsap'],
   },
   build: {
     chunkSizeWarningLimit: 800,

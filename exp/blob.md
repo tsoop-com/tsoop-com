@@ -4,4 +4,4 @@ title: blob
 
 [< back](/)
 
- <z-blob />
+ <exp-blob />

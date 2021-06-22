@@ -7,8 +7,8 @@ body {
   font-family: var(--font-family-base);
   font-size: 18px;
   font-weight: 400;
-  color: var(--c-text);
-  background-color: var(--c-bg);
+  color: #eee;
+  background-color: #333;
   direction: ltr;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
