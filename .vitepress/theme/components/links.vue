@@ -1,9 +1,9 @@
 <template lang="pug">
-.flex.flex-wrap.justify-center.py-16
+.flex.flex-wrap.justify-center
   link-button(
-    v-for="link in links"
-    :url="link.url"
-    :service="link.service"
+    v-for="(link,service) in links"
+    :url="link"
+    :service="service"
     )
 </template>
 
