@@ -148,4 +148,6 @@ video:
 
 <album-row :album="$frontmatter.albums.cassini" />
 
+<contact />
+
 <!-- <z-blob /> -->
