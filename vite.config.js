@@ -3,8 +3,7 @@ import Components from 'vite-plugin-components'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import WindiCSS from 'vite-plugin-windicss'
 import { ViteAliases } from 'vite-aliases'
-import glsl from 'vite-plugin-glsl';
-
+import glsl from 'vite-plugin-glsl'
 
 export default defineConfig({
   plugins: [
@@ -12,17 +11,14 @@ export default defineConfig({
     ViteAliases({
       dir: '.vitepress',
       deep: false,
-      adjustDuplicates:true
+      adjustDuplicates: true,
     }),
     Components({
-      dirs: [
-        '.vitepress/theme/components',
-        '.vitepress/comps',
-      ],
+      dirs: ['.vitepress/theme/components', '.vitepress/comps'],
       extensions: ['vue', 'ts'],
       directoryAsNamespace: true,
       globalNamespaces: ['global'],
-      customLoaderMatcher: id => id.endsWith('.md'),
+      customLoaderMatcher: (id) => id.endsWith('.md'),
       customComponentResolvers: [
         ViteIconsResolver({
           componentPrefix: '',
@@ -40,27 +36,18 @@ export default defineConfig({
         fileExtensions: ['vue', 'ts'],
       },
     }),
-
   ],
   optimizeDeps: {
-    include: [
-      'vue',
-      '@vueuse/core',
-      'tone',
-      'three',
-      'gsap'
-    ],
+    include: ['vue', '@vueuse/core', 'tone', 'three', 'gsap'],
   },
   build: {
     chunkSizeWarningLimit: 800,
-    rollupOptions:{
-      output:{
+    rollupOptions: {
+      output: {
         manualChunks: {
-          three: ['three']
-        }
-      }
-    }
-  }
+          three: ['three'],
+        },
+      },
+    },
+  },
 })
-
-
