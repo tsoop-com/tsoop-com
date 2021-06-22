@@ -12,6 +12,8 @@ a.link-button(
   la-yandex(v-if="service == 'yandex'")
   uil-boombox(v-if="service == 'boomplay'")
   la-vk(v-if="service == 'vk'")
+  la-github(v-if="service == 'github'")
+  la-amazon(v-if="service == 'amazon'")
 </template>
 
 <script setup>
