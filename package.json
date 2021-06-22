@@ -32,6 +32,7 @@
     "matter-js": "^0.17.1",
     "paper": "^0.12.15",
     "poly-decomp": "^0.3.0",
+    "simplex-noise": "^2.4.0",
     "three": "^0.129.0",
     "tone": "^14.8.26",
     "vite-plugin-glsl": "^0.0.4",
