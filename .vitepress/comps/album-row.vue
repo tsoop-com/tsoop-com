@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex.flex-wrap.bg-dark-900.align-center.py-12.shadow-2xl(
+.flex.flex-wrap.bg-dark-900.align-center.py-32.shadow-2xl(
   :style="{ background: album.background, backgroundSize: 'cover' }"
 )
   .flex-1.p-8.min-w-sm.flex.items-center

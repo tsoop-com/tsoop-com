@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex.flex-wrap.py-16.shadow-2xl
+.flex.flex-wrap.py-32.shadow-2xl
   .flex-1.p-8.flex.items-center.justify-center(v-for="video in list", :key="video")
     iframe.shadow-2xl.rounded-lg(
       width="360", 
