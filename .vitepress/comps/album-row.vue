@@ -1,13 +1,13 @@
 <template lang="pug">
-.flex.flex-wrap.bg-dark-900.align-center.py-12(
+.flex.flex-wrap.bg-dark-900.align-center.py-12.shadow-2xl(
   :style="{ background: album.background, backgroundSize: 'cover' }"
 )
   .flex-1.p-8.min-w-sm.flex.items-center
-    img(:class="{ [album.coverClass]: true }",:src="album.cover")
+    img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
   .flex-1.p-16.flex.flex-col.items-center.justify-center.min-w-sm
     .bandcamp.w-full
       .text-lg.text-light-100.p-4 {{ album.description }} {{ album.color }}
-      iframe(style="border: 0; width: 100%; height: 373px;", :src="album.bandcamp", seamless) 
+      iframe.rounded-lg.shadow-2xl(style="border: 0; width: 100%; height: 373px;", :src="album.bandcamp", seamless) 
         a(:href="album.links.bandcamp") {{album.title}} by tsoop
     links.text-3xl.py-8(:links="album.links")
 </template>

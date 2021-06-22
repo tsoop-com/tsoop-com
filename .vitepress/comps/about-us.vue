@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex.flex-wrap.text-light-800.bg-dark-500
+.flex.flex-wrap.text-light-800.bg-dark-500.py-16
   .p-8.flex-1
     .p-4.text-3xl tsoop is an independent collaborative multimedia project aimed to promote music and multimedia self-expression.
 

@@ -124,8 +124,6 @@ video:
 
 <links class="text-4xl py-16" :links="$frontmatter.mainLinks" />
 
-
-
 <album-row :album="$frontmatter.albums.joy_collab" />
 
 <about-us />

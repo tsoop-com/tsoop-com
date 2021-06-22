@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex.flex-wrap.items-center.bg-light-600.py-16
+.flex.flex-wrap.items-center.bg-light-600.py-16.shadow-2xl
   a.flex-1.p-8(href="https://chromatone.center",target="_blank")
     img(src="/img/holologo.svg")
   .flex-1.text-dark-300.p-8.flex.flex-col.items-center.text-center

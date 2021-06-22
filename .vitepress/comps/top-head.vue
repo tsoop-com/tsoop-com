@@ -1,7 +1,7 @@
 <template lang="pug">
 .row.p-8
-  z-logo
-  .text-4xl.text-light-100 live multimedia generation
+  z-logo.flex-1
+  .flex-1.text-4xl.text-light-100 live multimedia generation
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template lang="pug">
-.flex.flex-wrap.items-center.py-16.text-light-200.bg-dark-400
+.flex.flex-wrap.items-center.py-16.text-light-200.bg-dark-400.shadow-2xl
   .p-8.flex-1.min-w-sm
     .text-4xl collaborative arts improvisation project
     .text-xl.my-4 We design and practice friendly music and art cocreation
