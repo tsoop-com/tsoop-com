@@ -17,8 +17,21 @@ albums:
       yandex: https://music.yandex.ru/album/15766107
       amazon: https://music.amazon.com/albums/B095N8FLYH
       boomplay: https://www.boomplay.com/albums/26006180
+  miracle:
+    title: miracle mechanism live feat. daria dubovik
+    description: live performance @ 7th WAFEst festival
+    released: 17.07.2019
+    links:
+      spotify: https://open.spotify.com/album/19fRx1rV4uAmjNaQfOhRmL?si=ub-kiO77Q-mrk-X8sRTLPQ
+      apple: https://music.apple.com/us/album/miracle-mechanism-live/1483671339
+      youtube: https://music.youtube.com/playlist?list=OLAK5uy_kl_vb-pjGJRV3v5fBA1ZtbvERuit87vsk
+      yandex: https://music.yandex.ru/album/8877544
+      vk: https://vk.com/music/album/129086_50020659
+      amazon: https://www.amazon.com/Miracle-Mechanism-tsoop/dp/B07YNC3KBX/ref=sr_1_1?keywords=tsoop&qid=1577706006&s=dmusic&sr=1-1
+      boomplay: https://www.boomplay.com/albums/4542412?from=search&srModel=COPYLINK&srList=WEB
   cassini:
     title: cassini dreams
+    description: Tribute to the Cassini-Huygnes Saturn exploration space mission.
     released: 01.09.2017
     links: 
       spotify: https://open.spotify.com/album/6yU61kt9BTiKsy4CHoS29v

@@ -6,6 +6,7 @@
     img.bounce(src="/cassini.png")
   .flex-1.p-16.flex.flex-col.items-center.justify-center.min-w-lg
     .bandcamp.w-full
+      .text-lg.text-light-100.p-4 {{ album.description }}
       iframe(style="border: 0; width: 100%; height: 373px;", src="https://bandcamp.com/EmbeddedPlayer/album=3099555767/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/", seamless) <a href="https://tsoop.bandcamp.com/album/cassini-dreams">cassini dreams by tsoop</a>
     links.text-3xl.py-8(:links="album.links")
 </template>
