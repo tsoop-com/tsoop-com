@@ -1,6 +1,6 @@
 module.exports = {
   title: 'tsoop',
-  description: 'tsoop official web-site',
+  description: 'live multimedia generation',
   lang: 'en',
   themeConfig: {
     repo: '',
@@ -16,7 +16,7 @@ module.exports = {
       md.use(require('markdown-it-classy'))
       md.use(require('markdown-it-container'), 'card')
       md.use(require('markdown-it-external-links'), {
-        internalDomains: ['localhost', 'starovdenis.com'],
+        internalDomains: ['localhost', 'tsoop.ru'],
       })
     },
   },

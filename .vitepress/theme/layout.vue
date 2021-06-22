@@ -1,7 +1,5 @@
 <template lang="pug">
-.flex.flex-col.items-center 
-  .text-2xl.mt-16.mb-8 {{ site.title }}
-  z-logo
+.page
   content
 </template>
 
@@ -13,4 +11,7 @@ const { site } = useData()
 </script>
 
 <style scoped>
+.page {
+  @apply flex flex-col items-center bg-dark-200;
+}
 </style>

@@ -103,7 +103,7 @@ onMounted(() => {
               })
             }
           }
-          console.log(pathArray)
+          //console.log(pathArray)
         }
         new Zdog.Shape({
           addTo: anchor,
