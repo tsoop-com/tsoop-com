@@ -1,10 +1,10 @@
 <template lang="pug">
-.flex.flex-wrap.bg-dark-900.align-center.py-32.shadow-2xl(
+.row(
   :style="{ background: album.background, backgroundSize: 'cover' }"
 )
-  .flex-1.p-8.min-w-sm.flex.items-center
+  .panel
     img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
-  .flex-1.p-16.flex.flex-col.items-center.justify-center.min-w-sm
+  .panel
     .bandcamp.w-full
       .text-lg.text-light-100.p-4 {{ album.description }} {{ album.color }}
       iframe.rounded-lg.shadow-2xl(style="border: 0; width: 100%; height: 373px;", :src="album.bandcamp", seamless) 
@@ -22,7 +22,16 @@ const props = defineProps({
 });
 </script>
   
-  <style scoped>
+<style scoped>
+.row {
+  @apply flex flex-wrap py-8 shadow-2xl;
+}
+
+.panel {
+  @apply flex flex-col items-center justify-center p-2 sm:p-8;
+  flex: 1 1 300px;
+}
+
 .bounce {
   animation: bounce 12s infinite ease-in-out;
 }

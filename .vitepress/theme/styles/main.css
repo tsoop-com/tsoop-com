@@ -2,6 +2,7 @@ body {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   line-height: 1.4;
   font-family: var(--font-family-base);
   font-size: 18px;

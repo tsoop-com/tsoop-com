@@ -1,5 +1,5 @@
 ---
-title: tsoop
+title: live media generation
 mainLinks:
     instagram: https://www.instagram.com/tsoop.ru
     bandcamp: https://tsoop.bandcamp.com/
@@ -153,4 +153,4 @@ impro:
 
 <contact />
 
-<!-- <z-blob /> -->
+<exp-visuals />

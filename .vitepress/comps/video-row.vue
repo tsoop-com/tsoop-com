@@ -1,8 +1,8 @@
 <template lang="pug">
-.flex.flex-wrap.py-32.shadow-2xl
-  .flex-1.p-8.flex.items-center.justify-center(v-for="video in list", :key="video")
+.row
+  .flex-1.py-4.flex.items-center.justify-center(v-for="video in list", :key="video")
     iframe.shadow-2xl.rounded-lg(
-      width="360", 
+      width="320", 
       height="200", 
       :src="video", 
       title="YouTube video player", 
@@ -23,4 +23,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.row {
+  @apply flex flex-wrap py-8 sm:py-32 shadow-2xl;
+}
 </style>

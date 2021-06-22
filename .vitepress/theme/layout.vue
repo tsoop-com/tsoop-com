@@ -12,6 +12,6 @@ const { site } = useData()
 
 <style scoped>
 .page {
-  @apply flex flex-col items-center bg-dark-200;
+  @apply bg-dark-200;
 }
 </style>
