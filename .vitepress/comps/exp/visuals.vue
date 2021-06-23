@@ -1,12 +1,9 @@
 <template lang="pug">
 .row
   .link.text-2xl Experiments:
-  .link
-    a(href="/exp/waves.html") Distorted waves
-  .link
-    a(href="/exp/blob.html") Morping blob
-  .link
-    a(href="/exp/fleck.html") Fleck
+  a.link(href="/exp/waves.html") Distorted waves
+  a.link(href="/exp/blob.html") Morphing blob
+  a.link(href="/exp/simplex.html") Simplex noise
 </template>
 
 <script setup>
@@ -22,11 +19,7 @@ const props = defineProps({
 }
 
 .link {
-  @apply p-2 sm:p-4 text-center;
+  @apply p-2 sm:p-4 text-center underline;
   flex: 1 1 150px;
-}
-
-.link a {
-  @apply underline;
 }
 </style>
