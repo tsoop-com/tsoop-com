@@ -36,12 +36,12 @@
     "three": "^0.129.0",
     "tone": "^14.8.26",
     "vite-plugin-glsl": "^0.0.4",
-    "vue": "^3.1.1",
+    "vue": "^3.1.2",
     "webmidi": "^3.0.0-alpha.5",
     "zdog": "^1.1.2"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.359",
+    "@iconify/json": "^1.1.361",
     "markdown-it-classy": "^0.2.0",
     "markdown-it-container": "^3.0.0",
     "markdown-it-external-links": "^0.0.6",
@@ -52,8 +52,8 @@
     "vite-aliases": "0.8.2",
     "vite-plugin-components": "^0.11.2",
     "vite-plugin-icons": "^0.6.3",
-    "vite-plugin-windicss": "^1.1.0",
-    "vitepress": "0.15.4",
+    "vite-plugin-windicss": "^1.1.1",
+    "vitepress": "0.15.5",
     "vitepress-tags": "^0.4.0",
     "windicss": "3.1.3"
   }
