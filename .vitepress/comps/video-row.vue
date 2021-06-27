@@ -2,6 +2,7 @@
 .row
   .flex-1.py-4.flex.items-center.justify-center(v-for="video in list", :key="video")
     iframe.shadow-2xl.rounded-lg(
+      loading="lazy"
       width="320", 
       height="200", 
       :src="video", 

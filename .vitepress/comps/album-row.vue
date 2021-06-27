@@ -7,7 +7,12 @@
   .panel
     .bandcamp.w-full
       .text-lg.text-light-100.p-4 {{ album.description }} {{ album.color }}
-      iframe.rounded-lg.shadow-2xl(style="border: 0; width: 100%; height: 373px;", :src="album.bandcamp", seamless) 
+      iframe.rounded-lg.shadow-2xl(
+        style="border: 0; width: 100%; height: 373px;", 
+        :src="album.bandcamp"
+        loading="lazy"
+        seamless
+        ) 
         a(:href="album.links.bandcamp") {{album.title}} by tsoop
     links.text-3xl.py-8(:links="album.links")
 </template>
