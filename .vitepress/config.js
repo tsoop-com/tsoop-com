@@ -9,8 +9,8 @@ const meta = {
 }
 
 module.exports = {
-  title: 'tsoop',
-  description: 'live multimedia generation',
+  title: meta.title,
+  description: meta.description,
   lang: 'en',
   head: [
     ['meta', { name: 'author', content: meta.author }],

@@ -32,8 +32,8 @@ albums:
     background: '#2d8ea4'
     released: 02.04.2021
     video:
-      - https://www.youtube.com/embed/5aSf6ik05aY
-      - https://www.youtube.com/embed/h09USuZoeHM
+      - 5aSf6ik05aY
+      - h09USuZoeHM
     links:
       spotify: https://open.spotify.com/album/7zpJFhhJ65WA25H4yGyqL2
       apple: https://music.apple.com/us/album/circle-of-joy-single/1560696968
@@ -51,11 +51,11 @@ albums:
     background: '#b77fb0'
     released: 20.10.2020
     video:
-      - https://www.youtube.com/embed/_qNixUQ2ka8
-      - https://www.youtube.com/embed/XolLvOAoejo
-      - https://www.youtube.com/embed/SoT7O82cjWA
-      - https://www.youtube.com/embed/F_55F__x-SI
-      - https://www.youtube.com/embed/h-Vwh9Jhr88
+      - _qNixUQ2ka8
+      - XolLvOAoejo
+      - SoT7O82cjWA
+      - F_55F__x-SI
+      - h-Vwh9Jhr88
     links:
       spotify: https://open.spotify.com/album/2NDJPHtTYKTxaGEbROyCTu?si=zMtr_Bw-TmKTC1QoB61AOw
       apple: https://music.apple.com/ru/album/drops/1540753447
@@ -73,8 +73,8 @@ albums:
     background: '#b0da97'
     released: 01.05.2020
     video:
-      - https://www.youtube.com/embed/Vwt57rGZUWg
-      - https://www.youtube.com/embed/ZwuDowhVtaI
+      - Vwt57rGZUWg
+      - ZwuDowhVtaI
 
   miracle:
     title: miracle mechanism live feat. daria dubovik
@@ -112,10 +112,10 @@ albums:
 impro:
   
   video:
-    - https://www.youtube.com/embed/K2MwpOd8vEI
-    - https://www.youtube.com/embed/_p0WiIEkknQ
-    - https://www.youtube.com/embed/X4Jh3f8Hmp4
-    - https://www.youtube.com/embed/l8b2_6i3sSE
+    - K2MwpOd8vEI
+    - _p0WiIEkknQ
+    - X4Jh3f8Hmp4
+    - l8b2_6i3sSE
 
 
 
