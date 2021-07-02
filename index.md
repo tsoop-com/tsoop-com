@@ -23,6 +23,7 @@ albums:
       yandex: https://music.yandex.ru/album/15766107
       amazon: https://music.amazon.com/albums/B095N8FLYH
       boomplay: https://www.boomplay.com/albums/26006180
+      deezer: https://www.deezer.com/ru/album/232350852
 
   circle:
     title: circle of joy
@@ -42,6 +43,7 @@ albums:
       vk: https://vk.com/music/playlist/129086_50020677_90cae49f028bed02d8
       amazon: https://music.amazon.com/albums/B08YZBNXDP
       boomplay: https://www.boomplay.com/albums/22816238
+      deezer: https://www.deezer.com/ru/album/215195452
 
   drops:
     title: drops
@@ -64,6 +66,7 @@ albums:
       vk: https://vk.com/music/playlist/129086_50020670_f65a1ff6463168a5fc
       amazon: https://music.amazon.com/albums/B08ML4BCGT
       boomplay: https://www.boomplay.com/albums/17750669?from=search
+      deezer: https://www.deezer.com/ru/album/184036962
 
   spring:
     title: spring steam
@@ -91,6 +94,7 @@ albums:
       vk: https://vk.com/music/album/129086_50020659
       amazon: https://www.amazon.com/Miracle-Mechanism-tsoop/dp/B07YNC3KBX/ref=sr_1_1?keywords=tsoop&qid=1577706006&s=dmusic&sr=1-1
       boomplay: https://www.boomplay.com/albums/4542412?from=search&srModel=COPYLINK&srList=WEB
+      deezer: https://www.deezer.com/ru/album/113259752
 
   cassini:
     title: cassini dreams
@@ -108,6 +112,7 @@ albums:
       vk: https://vk.com/music/album/129086_50020668
       amazon: https://www.amazon.com/Cassini-Dreams-tsoop/dp/B084J78HQF
       boomplay: https://www.boomplay.com/albums/7454561
+      deezer: https://www.deezer.com/ru/album/130687022
 
 impro:
   

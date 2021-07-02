@@ -1,12 +1,14 @@
 <template lang="pug">
 .row(
+  :id="album.title.split(' ').join('-')"
   :style="{ background: album.background, backgroundSize: 'cover' }"
 )
   .panel
     img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
   .panel
     .bandcamp.w-full
-      .text-lg.text-light-100.p-4 {{ album.description }} {{ album.color }}
+      a.text-4xl.text-bold.px-4(:href="`#${album.title.split(' ').join('-')}`") {{ album.title }}
+      .text-lg.text-light-100.p-4 {{ album.description }}
       iframe.rounded-lg.shadow-2xl(
         style="border: 0; width: 100%; height: 373px;", 
         :src="album.bandcamp"

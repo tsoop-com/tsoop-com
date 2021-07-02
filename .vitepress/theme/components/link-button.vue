@@ -14,6 +14,7 @@ a.link-button(
   la-vk(v-if="service == 'vk'")
   la-github(v-if="service == 'github'")
   la-amazon(v-if="service == 'amazon'")
+  jam-deezer-circle(v-if="service == 'deezer'")
 </template>
 
 <script setup>
