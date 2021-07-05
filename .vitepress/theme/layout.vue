@@ -5,9 +5,8 @@
 
 <script setup>
 import { useData } from 'vitepress'
-import { defineProps } from 'vue'
 
-const { site } = useData()
+const { site } = useData();
 </script>
 
 <style scoped>

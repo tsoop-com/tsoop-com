@@ -3,14 +3,11 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import vertex from './blob-vs.glsl'
 import fragment from './blob-fs.glsl'
 import { Group, Scene, Color, PerspectiveCamera, WebGLRenderer, Object3D, ShaderMaterial, DoubleSide, MeshBasicMaterial, IcosahedronBufferGeometry, Mesh, Points } from 'three'
 import gsap from 'gsap'
-const props = defineProps({
-
-});
 
 onMounted(() => {
   init()

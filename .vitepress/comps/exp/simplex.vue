@@ -79,7 +79,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref, reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import SimplexNoise from 'simplex-noise'
 import { useTimestamp } from '@vueuse/core'
 

@@ -3,11 +3,8 @@ canvas#waves
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import * as THREE from 'three'
-const props = defineProps({
-
-});
 
 const vertex = `
 attribute vec3 position;

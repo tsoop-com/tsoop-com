@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import Zdog from 'zdog'
 import { paper } from 'paper'
 

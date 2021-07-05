@@ -18,7 +18,6 @@ a.link-button(
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 const props = defineProps({
   url: {
     type: String,

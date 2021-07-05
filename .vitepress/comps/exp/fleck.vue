@@ -4,10 +4,8 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue'
-const props = defineProps({
+import { onMounted } from 'vue'
 
-});
 
 
 onMounted(async function() {
