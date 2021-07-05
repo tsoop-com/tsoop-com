@@ -130,11 +130,11 @@ impro:
 
 <about />
 
-<links class="text-4xl py-16" :links="$frontmatter.mainLinks" />
+<links class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
 
 <album-row :album="$frontmatter.albums.joy_collab" />
 
-<about-us />
+<about-us class="row" />
 
 <video-row :list="$frontmatter.impro.video" />
 
@@ -152,7 +152,7 @@ impro:
 
 <album-row :album="$frontmatter.albums.miracle" />
 
-<chromatone />
+<chromatone/>
 
 <album-row :album="$frontmatter.albums.cassini" />
 

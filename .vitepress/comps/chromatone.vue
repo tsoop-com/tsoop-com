@@ -1,5 +1,5 @@
 <template lang="pug">
-.row
+.row.min-h-100vh
   a.panel(href="https://chromatone.center",target="_blank")
     img.m-4(src="/img/holologo.svg")
   .panel

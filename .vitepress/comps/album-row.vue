@@ -1,5 +1,5 @@
 <template lang="pug">
-.row(
+.row.min-h-100vh(
   :id="album.title.split(' ').join('-')"
   :style="{ background: album.background, backgroundSize: 'cover' }"
 )
@@ -30,10 +30,6 @@ const props = defineProps({
 </script>
   
 <style scoped>
-.row {
-  @apply flex flex-wrap py-8 shadow-2xl;
-}
-
 .panel {
   @apply flex flex-col items-center justify-center p-2 sm:p-8;
   flex: 1 1 300px;
