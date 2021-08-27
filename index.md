@@ -117,11 +117,16 @@ albums:
 impro:
   
   video:
-    - K2MwpOd8vEI
+    
     - _p0WiIEkknQ
     - X4Jh3f8Hmp4
     - l8b2_6i3sSE
 
+openSource:
+  video:
+    - K2MwpOd8vEI
+    - eLXAFOZaaTw
+    - yq9eTAs3BX8
 
 
 ---
@@ -130,17 +135,19 @@ impro:
 
 <about />
 
-<links class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
+<links color="#93ce85" class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
 
-<album-row :album="$frontmatter.albums.joy_collab" />
+<video-row :list="$frontmatter.impro.video" />
 
 <about-us class="row" />
 
-<video-row :list="$frontmatter.impro.video" />
+<video-row :list="$frontmatter.openSource.video" />
 
 <album-row :album="$frontmatter.albums.circle" />
 
 <video-row :list="$frontmatter.albums.circle.video" />
+
+<album-row :album="$frontmatter.albums.joy_collab" />
 
 <album-row :album="$frontmatter.albums.drops" />
 

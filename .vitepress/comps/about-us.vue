@@ -1,5 +1,7 @@
 <template lang="pug">
-.flex.flex-wrap.text-light-800.bg-dark-500.py-16
+.flex.flex-wrap.text-light-800.bg-dark-500.py-16(
+  :style="{ backgroundColor: color }"
+)
   .panel
     .p-4.text-3xl tsoop is an independent collaborative multimedia project aimed to promote music and multimedia self-expression.
 
@@ -12,6 +14,12 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  color: {
+    type: String,
+    default: '#88485d'
+  }
+});
 </script>
 
 <style scoped>

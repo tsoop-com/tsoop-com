@@ -1,5 +1,7 @@
 <template lang="pug">
-.flex.flex-wrap.justify-center
+.flex.flex-wrap.justify-center(
+  :style="{ backgroundColor: color }"
+)
   link-button(
     v-for="(link,service) in links"
     :url="link"
@@ -12,6 +14,10 @@ const props = defineProps({
   links: {
     type: Array,
     default: []
+  },
+  color: {
+    type: String,
+    default: ''
   }
 });
 </script>
