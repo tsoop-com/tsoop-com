@@ -30,7 +30,7 @@ export default defineConfig({
       globalNamespaces: ['global'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       exclude: [/node_modules/, /\.git/],
-      customComponentResolvers: [
+      resolvers: [
         IconsResolver({
           componentPrefix: '',
         }),

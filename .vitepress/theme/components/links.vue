@@ -12,8 +12,8 @@
 <script setup>
 const props = defineProps({
   links: {
-    type: Array,
-    default: []
+    type: Object,
+    default: {}
   },
   color: {
     type: String,
