@@ -111,7 +111,7 @@ function getPoints(n) {
 
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .cell {
   @apply p-2 m-1px rounded sm:(p-4 m-2px rounded-lg) lg:(p-8 m-4px rounded-xl);
 }
