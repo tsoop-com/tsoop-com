@@ -9,7 +9,7 @@
 <script setup>
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .row {
   @apply flex flex-wrap justify-center items-center p-4 sm: p-16 bg-dark-900 text-light-500;
 }

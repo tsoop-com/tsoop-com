@@ -58,27 +58,19 @@ function drag(e) {
 <template lang="pug">
 .flex.flex-col.items-center
   .flex
-    .flex.flex-col
-      .flex.flex-col
-
-        label(for="increment") Increment
-        input(v-model="increment" id="increment" type="range", max="0.005" min="-0.005" step="0.00001")
-    .p-2.border-1.rounded-xl.m-2.flex.flex-col
+    .p-2.border-1.rounded-xl.m-2.flex.flex-wrap
       .flex
         input(type="checkbox" id="box" v-model="show.box" )
-        label.p-2(for="box") Boxes
+        label.p-2(for="box") Dots
       .flex
         input(type="checkbox" id="line" v-model="show.line" )
         label.p-2(for="line") Lines
       .flex
         input(type="checkbox" id="circle" v-model="show.circle" )
-        label.p-2(for="circle") Circles
+        label.p-2(for="circle") Disks
       .flex
         input(type="checkbox" id="polygon" v-model="show.polygon" )
         label.p-2(for="polygon") Polygons
-    .flex.flex-col
-      label(for="zoom") Zoom {{ zoom }}
-      input(v-model="zoom" id="zoom" type="range" max="100" min="1" step="1")
   .flex.flex-col.relative(ref="art")
     button.p-2.shadow-lg.rounded-xl.m-1.absolute.left-6.top-6(@click="active = !active")
       la-play(v-if="!active")
@@ -120,6 +112,7 @@ function drag(e) {
               fill="none"
               :stroke-width="simplex.noise3D(y / zoom, x / zoom, progress) + 1"
               :stroke="`hsla(${simplex.noise3D(y / zoom, x / zoom, progress) * 180},50%,50%,1)`"
+              :style="{ transform: `rotate3d(1,1,1,${simplex.noise3D(y / zoom, x / zoom, progress) * 180 + 90}deg)` }"
               :r="1"
               )
             //- use(href="#truchet")
