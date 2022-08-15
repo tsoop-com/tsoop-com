@@ -4,6 +4,7 @@
   a.link(href="/exp/wave/") Distorted waves
   a.link(href="/exp/blob/") Morphing blob
   a.link(href="/exp/simplex/") Simplex noise
+  a.link(href="/exp/hydra/") Hydra synth
 </template>
 
 <script setup>

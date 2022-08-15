@@ -9,6 +9,7 @@ specifiers:
   colord: ^2.9.2
   gsap: ^3.10.4
   hidpi-canvas: ^1.0.10
+  hydra-ts: ^1.0.0
   markdown-it-classy: ^0.2.0
   markdown-it-container: ^3.0.0
   markdown-it-external-links: ^0.0.6
@@ -17,6 +18,7 @@ specifiers:
   patch-vue-directive-ssr: ^0.0.1
   poly-decomp: ^0.3.0
   pug: 3.0.2
+  regl: ^2.1.0
   simplex-noise: ^3.0.1
   three: ^0.141.0
   tone: ^14.8.40
@@ -43,9 +45,11 @@ dependencies:
   colord: 2.9.2
   gsap: 3.10.4
   hidpi-canvas: 1.0.10
+  hydra-ts: 1.0.0
   matter-js: 0.18.0
   paper: 0.12.15
   poly-decomp: 0.3.0
+  regl: 2.1.0
   simplex-noise: 3.0.1
   three: 0.141.0
   tone: 14.8.40
@@ -1151,6 +1155,12 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
+  /hydra-ts/1.0.0:
+    resolution: {integrity: sha512-qJXbIogzOXL8GIJauggAuuwPSqKdWsjlpHQ+oJt+dUo2bbRuvwFRQHAXld0BKU6a+9dZ2Kw2EWLyUi8pPKt13Q==}
+    dependencies:
+      regl: 1.7.0
+    dev: false
+
   /inflight/1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
@@ -1642,6 +1652,14 @@ packages:
 
   /regenerator-runtime/0.13.7:
     resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
+    dev: false
+
+  /regl/1.7.0:
+    resolution: {integrity: sha512-bEAtp/qrtKucxXSJkD4ebopFZYP0q1+3Vb2WECWv/T8yQEgKxDxJ7ztO285tAMaYZVR6mM1GgI6CCn8FROtL1w==}
+    dev: false
+
+  /regl/2.1.0:
+    resolution: {integrity: sha512-oWUce/aVoEvW5l2V0LK7O5KJMzUSKeiOwFuJehzpSFd43dO5spP9r+sSUfhKtsky4u6MCqWJaRL+abzExynfTg==}
     dev: false
 
   /repeat-string/1.6.1:

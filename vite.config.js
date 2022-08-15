@@ -51,6 +51,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['vue', '@vueuse/core', 'three', 'gsap'],
   },
+  ssr: {
+    noExternal: ['hydra-ts']
+  },
   build: {
     chunkSizeWarningLimit: 800,
     rollupOptions: {

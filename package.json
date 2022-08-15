@@ -2,7 +2,6 @@
   "name": "tsoop.ru",
   "version": "1.0.2",
   "description": "tsoop web site",
-  "main": "index.js",
   "keywords": [
     "tsoop",
     "music",
@@ -13,13 +12,14 @@
     "op-1",
     "nts-1"
   ],
-  "author": "davay",
   "license": "ISC",
+  "author": "davay",
+  "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev ",
     "build": "vitepress build ",
-    "serve": "vitepress serve --port 5005",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "dev": "vitepress dev ",
+    "serve": "vitepress serve --port 5005"
   },
   "dependencies": {
     "@vueuse/core": "8.6.0",
@@ -29,9 +29,11 @@
     "colord": "^2.9.2",
     "gsap": "^3.10.4",
     "hidpi-canvas": "^1.0.10",
+    "hydra-ts": "^1.0.0",
     "matter-js": "^0.18.0",
     "paper": "^0.12.15",
     "poly-decomp": "^0.3.0",
+    "regl": "^2.1.0",
     "simplex-noise": "^3.0.1",
     "three": "^0.141.0",
     "tone": "^14.8.40",
