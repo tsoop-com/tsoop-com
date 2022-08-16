@@ -3,8 +3,6 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export {}
-
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     About: typeof import('./.vitepress/comps/about.vue')['default']
@@ -39,3 +37,5 @@ declare module '@vue/runtime-core' {
     ZLogo: typeof import('./.vitepress/comps/z/logo.vue')['default']
   }
 }
+
+export {}
