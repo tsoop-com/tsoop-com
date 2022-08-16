@@ -2,10 +2,11 @@
 .row.min-h-100vh(
   :id="album.title.split(' ').join('-')"
   :style="{ background: album.background, backgroundSize: 'cover' }"
+  ref="target"
 )
   .panel
     img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
-  .panel
+  .panel(v-if="targetIsVisible || loaded")
     .bandcamp.w-full
       a.text-4xl.text-bold.px-4(:href="`#${album.title.split(' ').join('-')}`") {{ album.title }}
       .text-lg.text-light-100.p-4 {{ album.description }}
@@ -20,17 +21,30 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue'
+import { useElementVisibility } from '@vueuse/core'
+
+const target = ref(null)
+const loaded = ref(false)
+const targetIsVisible = useElementVisibility(target)
+
+watch(targetIsVisible, t => {
+  loaded.value = true
+})
+
+
 const props = defineProps({
   album: {
     type: Object,
     default: {}
   }
 });
+
 </script>
   
 <style scoped>
 .panel {
-  @apply flex flex-col items-center justify-center p-2 sm:p-8;
+  @apply flex flex-col items-center justify-center p-2 sm: p-8;
   flex: 1 1 300px;
 }
 
@@ -42,9 +56,11 @@ const props = defineProps({
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(18px) rotate(8deg);
   }
+
   100% {
     transform: translateY(0);
   }

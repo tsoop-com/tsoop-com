@@ -1,15 +1,14 @@
 <template lang="pug">
-.row.min-h-100vh
+.row.min-h-100vh(ref="target")
   a.panel(href="https://chromatone.center",target="_blank")
     img.m-4(src="/img/holologo.svg")
-  .panel
+  .panel(v-if="targetIsVisible || loaded")
     iframe.rounded-xl(
       width="320", 
       height="200", 
       src="https://www.youtube.com/embed/3_815sW-ZKY", 
       title="YouTube video player", 
       frameborder="0", 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", 
       allowfullscreen
       )
     .py-4 
@@ -22,12 +21,23 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue'
+import { useElementVisibility } from '@vueuse/core'
+
+const target = ref(null)
+const loaded = ref(false)
+const targetIsVisible = useElementVisibility(target)
+
+watch(targetIsVisible, t => {
+  loaded.value = true
+})
 </script>
 
 <style scoped>
 .row {
-  @apply flex flex-wrap items-center bg-light-900 py-8 sm:py-16 shadow-2xl;
+  @apply flex flex-wrap items-center bg-light-900 py-8 sm: py-16 shadow-2xl;
 }
+
 .panel {
   @apply text-dark-300 py-2 flex flex-col items-center text-center;
   flex: 1 1 300px;

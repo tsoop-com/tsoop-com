@@ -9,7 +9,7 @@ import { useData } from 'vitepress'
 const { site } = useData();
 </script>
 
-<style scoped>
+<style>
 .page {
   @apply bg-dark-200;
 }
