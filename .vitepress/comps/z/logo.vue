@@ -28,7 +28,9 @@
 <script setup>
 import { onMounted } from 'vue'
 import Zdog from 'zdog'
-import { paper } from 'paper'
+import pp from 'paper'
+
+const { paper } = pp
 
 onMounted(() => {
 
@@ -60,7 +62,7 @@ onMounted(() => {
     element: '.zdog-canvas',
     zoom: 1,
     translate: { y: 60, x: -10 },
-    onPrerender: function(ctx) {
+    onPrerender: function (ctx) {
 
     }
   });
@@ -73,7 +75,7 @@ onMounted(() => {
     addTo: illo
   })
 
-  paperProject.layers[0].children.forEach(function(item) {
+  paperProject.layers[0].children.forEach(function (item) {
     var zPos = (item.index - item.parent.children.length / 2) * zIndexMultiplier
     var itemTypes = {
       Path() {
@@ -192,7 +194,7 @@ onMounted(() => {
       dragStartRX = viewRotation.x;
       dragStartRY = viewRotation.y;
     },
-    onDragMove: function(pointer, moveX, moveY) {
+    onDragMove: function (pointer, moveX, moveY) {
       let moveRX = moveY / illo.width * TAU;
       let moveRY = moveX / illo.width * TAU;
       viewRotation.x = dragStartRX - moveRX;
@@ -227,6 +229,7 @@ onMounted(() => {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 .st1 {
   fill: none;
   stroke: #00aeef;
@@ -235,6 +238,7 @@ onMounted(() => {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 .st2 {
   fill: none;
   stroke: #cd4a9b;
@@ -243,6 +247,7 @@ onMounted(() => {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 .st3 {
   fill: none;
   stroke: #00aeef;
@@ -251,6 +256,7 @@ onMounted(() => {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 .st4 {
   fill: none;
   stroke: #fff200;

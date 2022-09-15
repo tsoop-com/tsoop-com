@@ -1,7 +1,3 @@
-import mdClassy from "markdown-it-classy";
-import mdContainer from "markdown-it-container";
-import mdLinks from "markdown-it-external-links";
-
 const meta = {
   title: "tsoop",
   description: "live music generation",
@@ -58,13 +54,5 @@ export default {
     editLinks: false,
     editLinkText: "Нашли ошибку?",
   },
-  markdown: {
-    config: (md) => {
-      md.use(mdClassy);
-      md.use(mdContainer, "card");
-      md.use(mdLinks, {
-        internalDomains: ["localhost", "tsoop.ru"],
-      });
-    },
-  },
+
 };

@@ -64,7 +64,7 @@ function onWindowResize() {
   console.log('- resize -');
 }
 //--------------------------------------------------------------------
-var primitiveElement = function() {
+var primitiveElement = function () {
   this.mesh = new Object3D();
   mat = new ShaderMaterial({
     side: DoubleSide,
@@ -158,7 +158,7 @@ var options = {
     points: false,
     redhell: true
   },
-  perlinRandom: function() {
+  perlinRandom: function () {
     gsap.to(this.perlin, 2, {
       //decay: Math.random() * 1.0,
       waves: Math.random() * 20.0,
@@ -167,7 +167,7 @@ var options = {
       ease: Elastic.easeOut
     });
   },
-  random: function() {
+  random: function () {
     //this.perlin.redhell = Math.random() >= 0.5; // 10 1 0.1 1.2
     gsap.to(this.perlin, 1, {
       eqcolor: 11.0,
@@ -177,7 +177,7 @@ var options = {
       ease: Quart.easeInOut
     });
   },
-  normal: function() {
+  normal: function () {
     this.perlin.redhell = true; // 10 1 0.1 1.2
     gsap.to(this.perlin, 1, {
       //speed: 0.12,
@@ -188,7 +188,7 @@ var options = {
       ease: Quart.easeInOut
     });
   },
-  darker: function() {
+  darker: function () {
     this.perlin.redhell = false; // 10 1 0.1 1.2
     gsap.to(this.perlin, 1, {
       //speed: 0.5,
@@ -199,7 +199,7 @@ var options = {
       ease: Quart.easeInOut
     });
   },
-  volcano: function() {
+  volcano: function () {
     this.perlin.redhell = false; // 10 1 0.1 1.2
     //this.perlin.speed = 0.83;
 
@@ -215,7 +215,7 @@ var options = {
       ease: Quart.easeInOut
     });
   },
-  cloud: function() {
+  cloud: function () {
     this.perlin.redhell = true; // 10 1 0.1 1.2
     //this.perlin.speed = 0.1;
 
@@ -231,7 +231,7 @@ var options = {
       ease: Quart.easeInOut
     });
   },
-  tornasol: function() {
+  tornasol: function () {
     this.perlin.redhell = true; // 10 1 0.1 1.2
     //this.perlin.speed = 0.25;
 
@@ -312,4 +312,5 @@ function animation() {
 </script>
 
 <style scoped>
+
 </style>

@@ -1,7 +1,8 @@
 <script setup>
 import { ref, reactive } from 'vue'
-import SimplexNoise from 'simplex-noise'
-import { useClamp, useStorage, onKeyStroke, useFullscreen } from '@vueuse/core'
+import { createNoise3D } from 'simplex-noise';
+import { useStorage, onKeyStroke, useFullscreen } from '@vueuse/core'
+import { useClamp } from '@vueuse/math'
 
 
 const art = ref()
@@ -34,12 +35,12 @@ const show = useStorage('simplex-mode', {
 })
 
 
-const simplex = new SimplexNoise()
+const noise3D = createNoise3D();
 
 function getPoints(n, angles = 3) {
   let points = ''
   for (let i = 1; i <= angles; i++) {
-    points += `${simplex.noise3D(n * i, n * i, progress.value) * 40 + 50},${simplex.noise3D((n + 1000) * i, (n + 5) * i + 1000, progress.value) * 40 + 50} `
+    points += `${noise3D(n * i, n * i, progress.value) * 40 + 50},${noise3D((n + 1000) * i, (n + 5) * i + 1000, progress.value) * 40 + 50} `
   }
   return points
 }
@@ -104,21 +105,21 @@ function drag(e) {
         g(v-for="x in 20" :key="x"  :transform="`translate(${x * 4},${y * 4})`")
           g(
             v-if="show.circle" stroke-width="0.5"  
-            :transform="`rotate(${simplex.noise3D(y / zoom, x / zoom, progress) * 180})`"
+            :transform="`rotate(${noise3D(y / zoom, x / zoom, progress) * 180})`"
             )
             circle(
               :cx="0"
               :cy="0"
               fill="none"
-              :stroke-width="simplex.noise3D(y / zoom, x / zoom, progress) + 1"
-              :stroke="`hsla(${simplex.noise3D(y / zoom, x / zoom, progress) * 180},50%,50%,1)`"
-              :style="{ transform: `rotate3d(1,1,1,${simplex.noise3D(y / zoom, x / zoom, progress) * 180 + 90}deg)` }"
+              :stroke-width="noise3D(y / zoom, x / zoom, progress) + 1"
+              :stroke="`hsla(${noise3D(y / zoom, x / zoom, progress) * 180},50%,50%,1)`"
+              :style="{ transform: `rotate3d(1,1,1,${noise3D(y / zoom, x / zoom, progress) * 180 + 90}deg)` }"
               :r="1"
               )
             //- use(href="#truchet")
           g(v-if="show.box")
             rect(
-              :fill="`hsla(${simplex.noise3D(y / zoom, x / zoom, progress) * 180},50%,50%,1)`"
+              :fill="`hsla(${noise3D(y / zoom, x / zoom, progress) * 180},50%,50%,1)`"
               :x="- 2"
               :y="- 2"
               rx="2"
@@ -134,28 +135,28 @@ function drag(e) {
             :x2="2"
             :y1="0"
             :y2="0"
-            :transform="`rotate(${simplex.noise3D(y / zoom, x / zoom, progress) * 180})`"
+            :transform="`rotate(${noise3D(y / zoom, x / zoom, progress) * 180})`"
             )
 
       g(v-if="show.polygon")
         g(v-for="t in 3" :key="t")
           polygon.fltr.mix-blend-multiply(
             :points="getPoints(t)"
-            :fill="`hsla(${simplex.noise3D(t * t * 20, t * (zoom / 5000) * 100 + 900, progress) * 180},50%,50%,1)`"
+            :fill="`hsla(${noise3D(t * t * 20, t * (zoom / 5000) * 100 + 900, progress) * 180},50%,50%,1)`"
             )
           line.mix-blend-difference(
             stroke="white"
-            :stroke-width="Math.pow(simplex.noise3D(t + 5, t * (zoom / 500) + 5, progress), 2) * 10 + 1"
-            :x1="Math.pow(simplex.noise3D(t + 5, t + 5, progress), 2) * 40 + 40"
-            :y1="Math.pow(simplex.noise3D(t + 10, t + 10, progress), 2) * 40 + 40"
-            :x2="simplex.noise3D(t + 20, t + 20, progress) * 40 + 40"
-            :y2="simplex.noise3D(t + 30, t + 30, progress) * 40 + 40"
+            :stroke-width="Math.pow(noise3D(t + 5, t * (zoom / 500) + 5, progress), 2) * 10 + 1"
+            :x1="Math.pow(noise3D(t + 5, t + 5, progress), 2) * 40 + 40"
+            :y1="Math.pow(noise3D(t + 10, t + 10, progress), 2) * 40 + 40"
+            :x2="noise3D(t + 20, t + 20, progress) * 40 + 40"
+            :y2="noise3D(t + 30, t + 30, progress) * 40 + 40"
           )
           circle.mix-blend-screen(
-            :fill="`hsla(${simplex.noise3D(t * t * (zoom / 5000), t * 300 + 600, progress) * 180},50%,50%,1)`"
-            :cx="simplex.noise3D(t + t * 20, t * 40 + 20, progress) * 30 + 40"
-            :cy="simplex.noise3D(t * t + 200, t * 40 - 10, progress) * 30 + 40"
-            :r="simplex.noise3D(t * 20 * (zoom / 5000), t + 220, progress) * 10 + 15"
+            :fill="`hsla(${noise3D(t * t * (zoom / 5000), t * 300 + 600, progress) * 180},50%,50%,1)`"
+            :cx="noise3D(t + t * 20, t * 40 + 20, progress) * 30 + 40"
+            :cy="noise3D(t * t + 200, t * 40 - 10, progress) * 30 + 40"
+            :r="noise3D(t * 20 * (zoom / 5000), t + 220, progress) * 10 + 15"
           )
 
 </template>

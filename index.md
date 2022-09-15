@@ -9,11 +9,24 @@ mainLinks:
     apple: https://music.apple.com/us/artist/tsoop/1473343646
 albums:
 
+  best_exit:
+    title: Лучший выход всегда насквозь
+    description: Новая коллаборация с Дарьей Тишиной, впервые исполненная на Чтецах весной 2022 года и за лето доведенная до ума по качеству и звуку. Но главное - передали мощный и неугасающий смысл Дашиных стихов.
+    released: 16.09.2022
+    background: '#2a5781'
+    cover: /img/exit.png
+    bandcamp: https://bandcamp.com/EmbeddedPlayer/album=2214815470/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
+    links:
+
+      youtube: https://music.youtube.com/playlist?list=OLAK5uy_m4-odKCOlPlX08_btp1iqsJldAY34TaDg&feature=share
+      yandex: https://music.yandex.ru/album/23431950
+
+      
   joy_collab:
     title: joy of collaboration
     description: A remix collaboration of 6 producers from Russia. Their takes on the Circle of Joy single - diverse, fun and very intense. Let's dance!
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3718915413/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
-    cover: /img/rmx.jpg
+    cover: /img/exit.jpg
     background: '#75cdaa'
     released: 20.06.2021
     links:
@@ -138,9 +151,13 @@ openSource:
 
 <links color="#93ce85" class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
 
+<about-us class="row" />
+
 <video-row :list="$frontmatter.impro.video" />
 
-<about-us class="row" />
+
+
+<album-row id="best_exit" :album="$frontmatter.albums.best_exit" />
 
 <video-row :list="$frontmatter.openSource.video" />
 
