@@ -11,16 +11,20 @@ albums:
 
   best_exit:
     title: Лучший выход всегда насквозь
-    description: Новая коллаборация с Дарьей Тишиной, впервые исполненная на Чтецах весной 2022 года и за лето доведенная до ума по качеству и звуку. Но главное - передали мощный и неугасающий смысл Дашиных стихов.
+    description: Новая коллаборация с Дарьей Тишиной. Впервые исполнено вживую на Чтецах весной 2022 года.
     released: 16.09.2022
     background: '#2a5781'
     cover: /img/exit.png
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=2214815470/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     links:
-
-      youtube: https://music.youtube.com/playlist?list=OLAK5uy_m4-odKCOlPlX08_btp1iqsJldAY34TaDg&feature=share
+      spotify: https://open.spotify.com/album/1vbMoZrprMVDxnQCVGZDa4
+      youtube: https://music.youtube.com/playlist?list=OLAK5uy_m4-odKCOlPlX08_btp1iqsJldAY34TaDg
       yandex: https://music.yandex.ru/album/23431950
-
+      vk: https://vk.com/music/playlist/129086_50020682_3221ed49369036f3a4
+      amazon: https://music.amazon.com/albums/B0BD7J52CD
+      boomplay: https://www.boomplay.com/albums/54303101
+      deezer: https://www.deezer.com/ru/album/354247257
+      
       
   joy_collab:
     title: joy of collaboration
