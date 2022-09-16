@@ -14,7 +14,7 @@ albums:
     description: Новая коллаборация с Дарьей Тишиной. Впервые исполнено вживую на Чтецах весной 2022 года.
     released: 16.09.2022
     background: '#2a5781'
-    cover: /img/exit.png
+    cover: /img/exit.jpg
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=2214815470/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     links:
       spotify: https://open.spotify.com/album/1vbMoZrprMVDxnQCVGZDa4
