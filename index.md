@@ -17,6 +17,7 @@ albums:
     cover: /img/exit.jpg
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=2214815470/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     links:
+      apple: https://music.apple.com/us/album/%D0%BB%D1%83%D1%87%D1%88%D0%B8%D0%B9-%D0%B2%D1%8B%D1%85%D0%BE%D0%B4-%D0%B2%D1%81%D0%B5%D0%B3%D0%B4%D0%B0-%D0%BD%D0%B0%D1%81%D0%BA%D0%B2%D0%BE%D0%B7%D1%8C-feat-daria-tishina-single/1646003822
       spotify: https://open.spotify.com/album/1vbMoZrprMVDxnQCVGZDa4
       youtube: https://music.youtube.com/playlist?list=OLAK5uy_m4-odKCOlPlX08_btp1iqsJldAY34TaDg
       yandex: https://music.yandex.ru/album/23431950
