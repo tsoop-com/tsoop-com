@@ -44,7 +44,7 @@ const props = defineProps({
   
 <style scoped>
 .panel {
-  @apply flex flex-col items-center justify-center p-2 sm: p-8;
+  @apply flex flex-col items-center justify-center p-2 sm_p-8;
   flex: 1 1 300px;
 }
 

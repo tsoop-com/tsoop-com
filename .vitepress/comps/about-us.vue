@@ -24,7 +24,7 @@ const props = defineProps({
 
 <style scoped>
 .panel {
-  @apply p-2 sm:p-8;
+  @apply p-2 sm_p-8;
   flex: 1 1 300px;
 }
 </style>

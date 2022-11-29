@@ -1,19 +1,18 @@
 ---
 title: live media generation
 mainLinks:
-    instagram: https://www.instagram.com/tsoop.ru
-    bandcamp: https://tsoop.bandcamp.com/
-    github: https://github.com/tsoop-ru
-    youtube: https://www.youtube.com/channel/UC1khwNdVx2ScQKJuwJJdlxQ
-    spotify: https://open.spotify.com/artist/0y3vCTnY6F5UROyBnOAPuF?si=TTC8BaneT0egl9Ek9Z11Hw
-    apple: https://music.apple.com/us/artist/tsoop/1473343646
+  instagram: https://www.instagram.com/tsoop.ru
+  bandcamp: https://tsoop.bandcamp.com/
+  github: https://github.com/tsoop-ru
+  youtube: https://www.youtube.com/channel/UC1khwNdVx2ScQKJuwJJdlxQ
+  spotify: https://open.spotify.com/artist/0y3vCTnY6F5UROyBnOAPuF?si=TTC8BaneT0egl9Ek9Z11Hw
+  apple: https://music.apple.com/us/artist/tsoop/1473343646
 albums:
-
   best_exit:
     title: Лучший выход всегда насквозь
     description: Новая коллаборация с Дарьей Тишиной. Впервые исполнено вживую на Чтецах весной 2022 года.
     released: 16.09.2022
-    background: '#2a5781'
+    background: "#2a5781"
     cover: /img/exit.jpg
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=2214815470/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     links:
@@ -25,14 +24,13 @@ albums:
       amazon: https://music.amazon.com/albums/B0BD7J52CD
       boomplay: https://www.boomplay.com/albums/54303101
       deezer: https://www.deezer.com/ru/album/354247257
-      
-      
+
   joy_collab:
     title: joy of collaboration
     description: A remix collaboration of 6 producers from Russia. Their takes on the Circle of Joy single - diverse, fun and very intense. Let's dance!
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3718915413/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
-    cover: /img/exit.jpg
-    background: '#75cdaa'
+    cover: /img/rmx.jpg
+    background: "#75cdaa"
     released: 20.06.2021
     links:
       apple: https://music.apple.com/us/album/joy-of-collaboration/1571038664
@@ -48,7 +46,7 @@ albums:
     description: A song about the structure of any creative process. We’re noting all the steps tou need to go through in order to realise any idea. From just a simple sketch to the final presentation. And having fun with every step made in this beautiful journey.
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=1151967928/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     cover: /img/circle.jpg
-    background: '#2d8ea4'
+    background: "#2d8ea4"
     released: 02.04.2021
     video:
       - 5aSf6ik05aY
@@ -68,7 +66,7 @@ albums:
     description: colorful blobs moving freely in the unlimited space
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3829524105/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     cover: /img/drops.jpg
-    background: '#b77fb0'
+    background: "#b77fb0"
     released: 20.10.2020
     video:
       - _qNixUQ2ka8
@@ -91,7 +89,7 @@ albums:
     description: shades of blooming flowers, melting ice and sounds of our souls’ inner strings
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3010274316/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     cover: /img/spring.jpg
-    background: '#b0da97'
+    background: "#b0da97"
     released: 01.05.2020
     video:
       - Vwt57rGZUWg
@@ -102,7 +100,7 @@ albums:
     description: live performance @ 7th WAFEst festival
     cover: /img/miracle.png
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3719716987/size=large/bgcol=89adb2/linkcol=0687f5/artwork=none/transparent=true/
-    background: '#89adb2'
+    background: "#89adb2"
     released: 17.07.2019
     links:
       spotify: https://open.spotify.com/album/19fRx1rV4uAmjNaQfOhRmL?si=ub-kiO77Q-mrk-X8sRTLPQ
@@ -119,10 +117,10 @@ albums:
     description: Tribute to the Cassini-Huygnes Saturn exploration space mission
     cover: /img/cassini.png
     coverClass: bounce
-    background: url('/img/saturn.jpg') no-repeat center 
+    background: url('/img/saturn.jpg') no-repeat center
     released: 01.09.2017
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3099555767/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
-    links: 
+    links:
       spotify: https://open.spotify.com/album/6yU61kt9BTiKsy4CHoS29v
       apple: https://music.apple.com/us/album/cassini-dreams/1500023423
       youtube: https://music.youtube.com/playlist?list=OLAK5uy_np3dWefMN3gkTgpdhz5FyaInVb3z5-MZk
@@ -133,21 +131,16 @@ albums:
       deezer: https://www.deezer.com/ru/album/130687022
 
 impro:
-  
   video:
-    
     - _p0WiIEkknQ
     - X4Jh3f8Hmp4
     - l8b2_6i3sSE
-
 
 openSource:
   video:
     - K2MwpOd8vEI
     - eLXAFOZaaTw
     - yq9eTAs3BX8
-
-
 ---
 
 <top-head />
@@ -159,8 +152,6 @@ openSource:
 <about-us class="row" />
 
 <video-row :list="$frontmatter.impro.video" />
-
-
 
 <album-row id="best_exit" :album="$frontmatter.albums.best_exit" />
 

@@ -12,11 +12,11 @@
 
 <style lang="postcss" scoped>
 .row {
-  @apply flex flex-wrap justify-center items-center p-4 sm: p-16 bg-dark-900 text-light-500;
+  @apply flex flex-wrap justify-center items-center p-4 sm_p-16 bg-dark-900 text-light-500;
 }
 
 .link {
-  @apply p-2 sm: p-4 text-center underline;
+  @apply p-2 sm_p-4 text-center underline;
   flex: 1 1 150px;
 }
 </style>

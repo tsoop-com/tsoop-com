@@ -36,7 +36,7 @@ export default defineConfig(async () => {
       }),
       WindiCSS({
         scan: {
-          dirs: ['.vitepress'],
+          dirs: ['.vitepress', 'exp'],
           include: ['index.md'],
           exclude: ['**/examples/**/*'],
           fileExtensions: ['vue', 'ts'],

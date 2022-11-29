@@ -14,7 +14,6 @@ declare module '@vue/runtime-core' {
     Contact: typeof import('./.vitepress/comps/contact.vue')['default']
     ExpBlob: typeof import('./.vitepress/comps/exp/blob.vue')['default']
     ExpFleck: typeof import('./.vitepress/comps/exp/fleck.vue')['default']
-    ExpSimplex: typeof import('./.vitepress/comps/exp/simplex.vue')['default']
     ExpVisuals: typeof import('./.vitepress/comps/exp/visuals.vue')['default']
     ExpWaves: typeof import('./.vitepress/comps/exp/waves.vue')['default']
     JamDeezerCircle: typeof import('~icons/jam/deezer-circle')['default']

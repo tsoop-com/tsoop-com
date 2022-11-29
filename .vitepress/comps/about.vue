@@ -11,11 +11,11 @@
 
 <style scoped>
 .row {
-  @apply flex flex-wrap items-center py-8 sm:py-16 text-light-200 bg-dark-400 shadow-2xl;
+  @apply flex flex-wrap items-center py-8 sm_py-16 text-light-200 bg-dark-400 shadow-2xl;
 }
 
 .panel {
-  @apply p-4 sm:p-8;
+  @apply p-4 sm_p-8;
   flex: 1 1 200px;
 }
 </style>

@@ -1,47 +1,47 @@
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  @media (max-height: 1000px) {
-    scroll-snap-type: none;
-  }
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	@media (max-height: 1000px) {
+		scroll-snap-type: none;
+	}
 }
 
 body {
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-x: hidden;
-  line-height: 1.4;
-  font-family: var(--font-family-base);
-  font-size: 18px;
-  font-weight: 400;
-  color: #eee;
-  background-color: #333;
-  direction: ltr;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @apply transition-colors;
+	width: 100%;
+	min-width: 320px;
+	min-height: 100vh;
+	overflow-x: hidden;
+	line-height: 1.4;
+	font-family: var(--font-family-base);
+	font-size: 18px;
+	font-weight: 400;
+	color: #eee;
+	background-color: #333;
+	direction: ltr;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@apply transition-colors;
 }
 
 .row {
-  @apply flex flex-wrap py-8 sm:py-16 shadow-2xl;
-  scroll-snap-align: end;
+	@apply flex flex-wrap py-8 sm_py-16 shadow-2xl;
+	scroll-snap-align: end;
 }
 
 .bounce {
-  animation: bounce 12s infinite ease-in-out;
+	animation: bounce 12s infinite ease-in-out;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(18px) rotate(8deg);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(18px) rotate(8deg);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }

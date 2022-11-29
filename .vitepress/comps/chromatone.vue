@@ -35,7 +35,7 @@ watch(targetIsVisible, t => {
 
 <style scoped>
 .row {
-  @apply flex flex-wrap items-center bg-light-900 py-8 sm: py-16 shadow-2xl;
+  @apply flex flex-wrap items-center bg-light-900 py-8 sm_py-16 shadow-2xl;
 }
 
 .panel {

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive } from 'vue'
-import { createNoise3D } from 'simplex-noise';
+import { createNoise3D, createNoise2D } from 'simplex-noise';
 import { useStorage, onKeyStroke, useFullscreen } from '@vueuse/core'
 import { useClamp } from '@vueuse/math'
 
@@ -36,6 +36,7 @@ const show = useStorage('simplex-mode', {
 
 
 const noise3D = createNoise3D();
+const noise2D = createNoise2D();
 
 function getPoints(n, angles = 3) {
   let points = ''
@@ -53,38 +54,45 @@ function drag(e) {
   zoom.value += y * 0.1
 }
 
+function wheelHandler(e) {
+  count.value += e.delta[1] / 10000
+}
+
+
 </script>
 
 
 <template lang="pug">
-.flex.flex-col.items-center
+.flex.flex-col.items-stretch
   .flex
-    .p-2.border-1.rounded-xl.m-2.flex.flex-wrap
+    .flex.gap-2.absolute.right-2.bottom-4.z-200
+      button.p-2.shadow-lg.rounded-xl.m-1(@click="active = !active")
+        la-play(v-if="!active")
+        la-pause(v-else)
+      button.p-2.shadow.rounded-xl.m-1(@click="toggle()")
+        la-expand
+    .p-2.border-1.rounded-xl.m-2.flex.flex-col.absolute.bottom-4.left-12.bg-dark-800.bg-opacity-90.z-200.opacity-20.hover_opacity-90.transition
       .flex
         input(type="checkbox" id="box" v-model="show.box" )
-        label.p-2(for="box") Dots
+        label.p-1(for="box") Dots
       .flex
         input(type="checkbox" id="line" v-model="show.line" )
-        label.p-2(for="line") Lines
+        label.p-1(for="line") Lines
       .flex
         input(type="checkbox" id="circle" v-model="show.circle" )
-        label.p-2(for="circle") Disks
+        label.p-1(for="circle") Disks
       .flex
         input(type="checkbox" id="polygon" v-model="show.polygon" )
-        label.p-2(for="polygon") Polygons
+        label.p-1(for="polygon") Polygons
   .flex.flex-col.relative(ref="art")
-    button.p-2.shadow-lg.rounded-xl.m-1.absolute.left-6.top-6(@click="active = !active")
-      la-play(v-if="!active")
-      la-pause(v-else)
-    button.p-2.shadow.rounded-xl.m-1.absolute.right-6.top-6(@click="toggle()")
-      la-expand
-    svg.max-h-100vh.m-auto.cursor-pointer(
+    svg.max-h-100vh.m-auto.w-full.cursor-pointer(
       style="transform-box: fill-box"
       version="1.1",
       baseProfile="full",
       viewBox="-10 -10 100 100",
       xmlns="http://www.w3.org/2000/svg",
       v-drag="drag"
+      v-wheel="wheelHandler"
       )
       defs
         g(id="truchet")
@@ -142,28 +150,28 @@ function drag(e) {
         g(v-for="t in 3" :key="t")
           polygon.fltr.mix-blend-multiply(
             :points="getPoints(t)"
-            :fill="`hsla(${noise3D(t * t * 20, t * (zoom / 5000) * 100 + 900, progress) * 180},50%,50%,1)`"
+            :fill="`hsla(${noise2D(t * (zoom / 5000) * 100 + 900, noise3D(t + 30*t, t + 30*t, progress)) * 180},50%,50%,1)`"
             )
           line.mix-blend-difference(
-            stroke="white"
-            :stroke-width="Math.pow(noise3D(t + 5, t * (zoom / 500) + 5, progress), 2) * 10 + 1"
-            :x1="Math.pow(noise3D(t + 5, t + 5, progress), 2) * 40 + 40"
-            :y1="Math.pow(noise3D(t + 10, t + 10, progress), 2) * 40 + 40"
-            :x2="noise3D(t + 20, t + 20, progress) * 40 + 40"
-            :y2="noise3D(t + 30, t + 30, progress) * 40 + 40"
-          )
+            :stroke="`hsla(${noise2D(t * (zoom / 2000), noise2D(t * t, progress)) * 180},50%,50%,1)`"
+            :stroke-width="Math.pow(noise2D(t * (zoom / 500) + 5, noise2D( t + 50, progress)), 2) * 80 + 1"
+            :x1="Math.pow(noise2D( t + 5, noise2D( t + 50, progress)), 2) * 40 + 40"
+            :y1="Math.pow(noise2D( t + 10, noise2D( t + 100, progress)), 2) * 40 + 40"
+            :x2="noise2D(t + 20,  noise2D( t + 200, progress)) * 40 + 40"
+            :y2="noise2D(t + 30, noise2D( t + 300, progress)) * 40 + 40"
+            )
           circle.mix-blend-screen(
-            :fill="`hsla(${noise3D(t * t * (zoom / 5000), t * 300 + 600, progress) * 180},50%,50%,1)`"
-            :cx="noise3D(t + t * 20, t * 40 + 20, progress) * 30 + 40"
-            :cy="noise3D(t * t + 200, t * 40 - 10, progress) * 30 + 40"
-            :r="noise3D(t * 20 * (zoom / 5000), t + 220, progress) * 10 + 15"
-          )
+            :fill="`hsla(${noise2D(t * t * (zoom / 5000), noise2D(t*t, progress)) * 180},50%,50%,1)`"
+            :cx="noise2D(t + t * 20, noise2D(t + 3000, progress)) * 30 + 40"
+            :cy="noise2D(t * t + 200,  noise2D(t + 390,  progress)) * 30 + 40"
+            :r="noise2D(t * 20 * (zoom / 5000), noise2D(t + 930, progress)) * 10 + 15"
+            )
 
 </template>
 
 
 <style lang="postcss" scoped>
 .cell {
-  @apply p-2 m-1px rounded sm: (p-4 m-2px rounded-lg) lg:(p-8 m-4px rounded-xl);
+  @apply p-2 m-1px rounded sm_(p-4 m-2px rounded-lg) lg_(p-8 m-4px rounded-xl);
 }
 </style>

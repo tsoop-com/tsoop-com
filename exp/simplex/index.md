@@ -2,6 +2,11 @@
 title: Simplex noise playground
 ---
 
-[back](/)
+<script setup>
+import expSimplex from './simplex.vue'
 
-<exp-simplex />
+</script>
+
+<client-only>
+	<exp-simplex />
+</client-only>
