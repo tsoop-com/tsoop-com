@@ -180,3 +180,5 @@ openSource:
 <contact />
 
 <exp-visuals />
+
+<iframe loading="lazy" width="100%" height="800px" frameborder="1" src="https://www.shadertoy.com/embed/cs2GWD?gui=false&t=10&paused=false&muted=true" allowfullscreen></iframe>
