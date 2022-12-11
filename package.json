@@ -36,24 +36,24 @@
 		"poly-decomp": "^0.3.0",
 		"regl": "^2.1.0",
 		"simplex-noise": "4.0.1",
-		"three": "^0.146.0",
+		"three": "^0.147.0",
 		"tone": "^14.8.49",
 		"vue": "^3.2.45",
 		"webmidi": "^3.0.22",
 		"zdog": "^1.1.3"
 	},
 	"devDependencies": {
-		"@iconify/json": "^2.1.143",
+		"@iconify/json": "^2.1.150",
 		"patch-vue-directive-ssr": "^0.0.1",
 		"pug": "3.0.2",
-		"typescript": "^4.9.3",
-		"unplugin-auto-import": "^0.11.5",
+		"typescript": "^4.9.4",
+		"unplugin-auto-import": "^0.12.0",
 		"unplugin-icons": "^0.14.14",
 		"unplugin-vue-components": "^0.22.11",
-		"vite": "3.2.4",
+		"vite": "4.0.0",
 		"vite-plugin-glsl": "0.5.4",
 		"vite-plugin-windicss": "^1.8.8",
-		"vitepress": "1.0.0-alpha.29",
+		"vitepress": "1.0.0-alpha.31",
 		"windicss": "3.5.6"
 	}
 }
