@@ -35,8 +35,8 @@ watch(targetIsVisible, t => {
 
 
 
-<style scoped>
+<style scoped lang="postcss">
 .row {
-  @apply bg-dark-200;
+  @apply bg-transparent;
 }
 </style>

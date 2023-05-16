@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from 'vitepress'
-import { pages } from '../composables/pages'
+import { pages } from '../../composables/pages'
 
 const route = useRoute()
 

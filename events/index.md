@@ -8,4 +8,4 @@ Every Thursday at Pirate Bay we have a Music Geeks Meetup. Everyone, who is inte
 
 The community oscillates, people come and go, but the format grows and builds momentum. So see you next Thursday at 7 PM at the [Pirate Bay FabLab, Phuket](https://chromatone.center/academy/centers/phuket/)!
 
-<events-list />
+<event-list />

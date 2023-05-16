@@ -9,8 +9,16 @@ import { useData } from 'vitepress'
 const { site } = useData();
 </script>
 
-<style>
+<style lang="postcss">
 .page {
-  @apply bg-dark-200;
+  @apply bg-transparent p-2;
+}
+
+.page>div>div {
+  @apply gap-4 flex flex-col
+}
+
+.page>div>div>div {
+  @apply rounded overflow-hidden;
 }
 </style>
