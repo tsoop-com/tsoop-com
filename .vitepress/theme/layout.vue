@@ -13,7 +13,7 @@ const page = computed(() => usePage(route.path))
 const siblings = computed(() => useSiblings(route.path))
 const parents = computed(() => useParents(route.path))
 
-const children = computed(() => pages[page.value.path])
+const children = computed(() => pages[page.value?.path])
 
 function scrollToTop() {
   window.scroll(0, 0)

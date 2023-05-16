@@ -69,6 +69,9 @@ devDependencies:
   '@iconify/json':
     specifier: ^2.2.65
     version: 2.2.65
+  '@types/color-hash':
+    specifier: 1.0.2
+    version: 1.0.2
   '@unocss/extractor-pug':
     specifier: 0.51.8
     version: 0.51.8(pug@3.0.2)
@@ -640,6 +643,10 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@types/color-hash@1.0.2:
+    resolution: {integrity: sha512-QJCVXSVRse+mMvzWQ8vH6AcKxtqCgHPHf5abAdGn86DEeQdUpSJnKAeCa1+hZuohaUF3l4RhigC9akRx82Bwig==}
     dev: true
 
   /@types/debug@4.1.7:
