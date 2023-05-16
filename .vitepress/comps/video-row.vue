@@ -1,3 +1,23 @@
+<script setup>
+import { ref, watch } from 'vue'
+import { useElementVisibility } from '@vueuse/core'
+
+const props = defineProps({
+  list: {
+    type: Array,
+    default: []
+  }
+});
+
+const target = ref(null)
+const loaded = ref(false)
+const targetIsVisible = useElementVisibility(target)
+
+watch(targetIsVisible, t => {
+  loaded.value = true
+})
+</script>
+
 <template lang="pug">
 .row.gap-12.px-4.justify-between(ref="target")
   template(v-if="targetIsVisible || loaded")
@@ -13,25 +33,7 @@
         )
 </template>
 
-<script setup>
-import { ref, watch } from 'vue'
-import { useElementVisibility } from '@vueuse/core'
 
-const target = ref(null)
-const loaded = ref(false)
-const targetIsVisible = useElementVisibility(target)
-
-watch(targetIsVisible, t => {
-  loaded.value = true
-})
-
-const props = defineProps({
-  list: {
-    type: Array,
-    default: []
-  }
-});
-</script>
 
 <style scoped>
 .row {

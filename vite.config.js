@@ -4,6 +4,14 @@ import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite'
+import Pages from "vite-plugin-pages";
+import { extendRoutes } from "vitepress-pages";
+import generateSitemap from 'vite-plugin-pages-sitemap'
+
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(async () => {
   const glsl = (await import('vite-plugin-glsl')).default;
@@ -16,6 +24,21 @@ export default defineConfig(async () => {
           /\.vue\??/, // .vue
         ],
         imports: ['vue'],
+      }),
+      Pages({
+        dirs: [
+          { dir: ".", baseRoute: "" },
+        ],
+        exclude: ['**/node_modules/**/*.*', '**/!(index).md'],
+        extensions: ['md'],
+        ...extendRoutes({
+          root: dirname,
+          mediaTypes: {
+            cover: { size: 1200, height: 800, fit: "inside" },
+            icon: { width: 200, height: 200, fit: "inside" }
+          }
+        }),
+        onRoutesGenerated: routes => (generateSitemap({ routes, hostname: 'https://tsoop.com', dest: "public" })),
       }),
       glsl(),
       Components({

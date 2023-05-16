@@ -14,6 +14,9 @@ declare module '@vue/runtime-core' {
     AlbumRow: typeof import('./.vitepress/comps/album-row.vue')['default']
     Chromatone: typeof import('./.vitepress/comps/chromatone.vue')['default']
     Contact: typeof import('./.vitepress/comps/contact.vue')['default']
+    EventCard: typeof import('./.vitepress/comps/event-card.vue')['default']
+    EventsList: typeof import('./.vitepress/comps/events-list.vue')['default']
+    EventsRow: typeof import('./.vitepress/comps/events-row.vue')['default']
     ExpBlob: typeof import('./.vitepress/comps/exp/blob.vue')['default']
     ExpFleck: typeof import('./.vitepress/comps/exp/fleck.vue')['default']
     ExpVisuals: typeof import('./.vitepress/comps/exp/visuals.vue')['default']
@@ -37,6 +40,7 @@ declare module '@vue/runtime-core' {
     TopHead: typeof import('./.vitepress/comps/top-head.vue')['default']
     UilBoombox: typeof import('~icons/uil/boombox')['default']
     VideoRow: typeof import('./.vitepress/comps/video-row.vue')['default']
+    YoutubeEmbed: typeof import('./.vitepress/comps/youtube-embed.vue')['default']
     ZLogo: typeof import('./.vitepress/comps/z/logo.vue')['default']
   }
 }
