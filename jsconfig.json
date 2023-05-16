@@ -1,5 +1,8 @@
 {
   "vueCompilerOptions": {
-    "experimentalDisableTemplateSupport": true
+    "plugins": [
+      "@vue/language-plugin-pug",
+      "@volar/vue-language-plugin-pug"
+    ]
   }
 }

@@ -1,5 +1,6 @@
 ---
 title: live media generation
+home: true
 mainLinks:
   instagram: https://www.instagram.com/tsoop.music
   bandcamp: https://tsoop.bandcamp.com/
@@ -147,7 +148,7 @@ openSource:
 
 <about />
 
-<links color="#93ce85" class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
+<links color="#709c65" class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
 
 <about-us class="row" />
 
