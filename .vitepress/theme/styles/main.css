@@ -1,9 +1,5 @@
 html {
 	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
-	@media (max-height: 1000px) {
-		scroll-snap-type: none;
-	}
 }
 
 body {
@@ -27,7 +23,6 @@ body {
 
 .row {
 	@apply flex flex-wrap py-8 sm_py-16 shadow-2xl;
-	scroll-snap-align: end;
 }
 
 .bounce {

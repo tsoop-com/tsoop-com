@@ -2,11 +2,15 @@ import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import WindiCSS from 'vite-plugin-windicss'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from "vite-plugin-pages";
 import { extendRoutes } from "vitepress-pages";
 import generateSitemap from 'vite-plugin-pages-sitemap'
+
+import Unocss from 'unocss/vite'
+import { transformerDirectives, presetIcons, presetUno, extractorSplit } from 'unocss'
+import extractorPug from '@unocss/extractor-pug'
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -57,13 +61,23 @@ export default defineConfig(async () => {
       Icons({
         defaultStyle: 'vertical-align: middle;',
       }),
-      WindiCSS({
-        scan: {
-          dirs: ['.vitepress', 'exp'],
-          include: ['index.md'],
-          exclude: ['**/examples/**/*'],
-          fileExtensions: ['vue', 'ts'],
-        },
+      Unocss({
+        transformers: [
+          transformerDirectives(),
+        ],
+        presets: [
+          presetIcons({
+            scale: 1.2,
+            extraProperties: {
+              'vertical-align': 'middle'
+            }
+          }),
+          presetUno(),
+        ],
+        extractors: [
+          extractorSplit,
+          extractorPug()
+        ]
       }),
     ],
     optimizeDeps: {
