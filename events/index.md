@@ -1,7 +1,7 @@
 ---
 title: Music Geeks Meetups
 description: Weekly gatherings to jam, share and create music visually
-cover: MGM10.png
+cover: main.png
 ---
 
 

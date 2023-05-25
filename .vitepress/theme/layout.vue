@@ -27,7 +27,7 @@ function scrollToTop() {
     a.font-mono.left-3.fixed.top-4.z-100(href="/" @click="scrollToTop()") tsoop
     img.max-w-full.sticky.top-0.opacity-50(:src="page.cover" v-if="page?.cover")
     content.p-4.bg-dark-300.mt-20
-    .p-2.flex.flex-wrap.gap-2.z-200.bg-dark-400(v-if="children?.length>0")
+    .p-2.flex.flex-wrap.gap-4.z-200.bg-dark-400(v-if="children?.length>0")
       event-card(v-for="event in children" :key="event.date" :event="event")
 
     .flex.flex-wrap.z-200.siblings
