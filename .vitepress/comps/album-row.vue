@@ -7,7 +7,7 @@
   .panel
     img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
   .panel(v-if="targetIsVisible || loaded")
-    .bandcamp.w-full
+    .bandcamp.w-full.flex.flex-col
       a.text-4xl.text-bold.px-4(:href="`#${album.title.split(' ').join('-')}`") {{ album.title }}
       .text-lg.text-light-100.p-4 {{ album.description }}
       iframe.rounded-lg.shadow-2xl(
@@ -17,6 +17,7 @@
         seamless
         ) 
         a(:href="album.links.bandcamp") {{album.title}} by tsoop
+    a.text-light-100.mt-8.mr-auto.ml-4(:href="album.link" v-if="album?.link" target="_blank") {{ album.link }}
     links.text-3xl.py-8(:links="album.links")
 </template>
 

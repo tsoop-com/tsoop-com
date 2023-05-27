@@ -65,6 +65,7 @@ albums:
   drops:
     title: drops
     description: colorful blobs moving freely in the unlimited space
+    link: https://drops.tsoop.com
     bandcamp: https://bandcamp.com/EmbeddedPlayer/album=3829524105/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/
     cover: /img/drops.jpg
     background: "#b77fb0"
