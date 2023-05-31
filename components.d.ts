@@ -34,7 +34,6 @@ declare module '@vue/runtime-core' {
     LaYoutube: typeof import('~icons/la/youtube')['default']
     LinkButton: typeof import('./.vitepress/theme/components/link-button.vue')['default']
     Links: typeof import('./.vitepress/theme/components/links.vue')['default']
-    Pages: typeof import('./.vitepress/theme/components/pages.vue')['default']
     TopHead: typeof import('./.vitepress/theme/components/top-head.vue')['default']
     UilBoombox: typeof import('~icons/uil/boombox')['default']
     VideoRow: typeof import('./.vitepress/theme/components/video-row.vue')['default']
