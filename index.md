@@ -145,6 +145,10 @@ openSource:
     - yq9eTAs3BX8
 ---
 
+<script setup>
+import EventRow from './events/EventRow.vue'
+  </script>
+
 <top-head />
 
 <about />

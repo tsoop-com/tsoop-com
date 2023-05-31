@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tsoop.com/sitemap.xml

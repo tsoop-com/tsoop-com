@@ -5,6 +5,8 @@ import { pages } from '../../composables/pages'
 const route = useRoute()
 
 const list = pages[route.path]
+
+
 </script>
 
 <template lang='pug'>

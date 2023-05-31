@@ -1,8 +1,7 @@
 {
   "vueCompilerOptions": {
     "plugins": [
-      "@vue/language-plugin-pug",
-      "@volar/vue-language-plugin-pug"
+      "@vue/language-plugin-pug"
     ]
   }
 }

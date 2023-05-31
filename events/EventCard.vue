@@ -5,7 +5,8 @@ const props = defineProps({
   event: {
     type: Object,
     default: () => ({})
-  }
+  },
+  url: { type: String, default: '' }
 })
 
 const formatted = useDateFormat(() => props.event?.date, 'DD MMMM YYYY')
@@ -19,7 +20,7 @@ const background = computed(() => {
 </script>
 
 <template lang='pug'>
-a.p-4.flex.flex-col.bg-dark-700.rounded-lg.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.gap-2.flex-1.max-w-90(:href="event.path" :style="{background}" )
+a.p-4.flex.flex-col.bg-dark-700.rounded-lg.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.gap-2.flex-1.max-w-90(:href="url" :style="{background}" )
   img.max-w-full.min-w-50(:src="event.cover" v-if="event?.cover")
   .flex-1
   .text-xs {{ formatted }}
