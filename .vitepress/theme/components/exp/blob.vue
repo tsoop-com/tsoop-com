@@ -4,8 +4,8 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import vertex from './blob-vs.glsl'
-import fragment from './blob-fs.glsl'
+import vertex from './blob-vs.glsl?raw'
+import fragment from './blob-fs.glsl?raw'
 import { Group, Scene, Color, PerspectiveCamera, WebGLRenderer, Object3D, ShaderMaterial, DoubleSide, MeshBasicMaterial, IcosahedronBufferGeometry, Mesh, Points } from 'three'
 import gsap from 'gsap'
 
@@ -311,6 +311,4 @@ function animation() {
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
