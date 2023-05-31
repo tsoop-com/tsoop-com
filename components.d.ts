@@ -14,7 +14,6 @@ declare module '@vue/runtime-core' {
     AlbumRow: typeof import('./.vitepress/theme/components/album-row.vue')['default']
     Chromatone: typeof import('./.vitepress/theme/components/chromatone.vue')['default']
     Contact: typeof import('./.vitepress/theme/components/contact.vue')['default']
-    EventList: typeof import('./.vitepress/theme/components/event/list.vue')['default']
     ExpBlob: typeof import('./.vitepress/theme/components/exp/blob.vue')['default']
     ExpFleck: typeof import('./.vitepress/theme/components/exp/fleck.vue')['default']
     ExpVisuals: typeof import('./.vitepress/theme/components/exp/visuals.vue')['default']

@@ -205,7 +205,7 @@ onMounted(() => {
   let cycleCount = 200;
   function animate() {
     let progress = ticker / cycleCount;
-    let tween = Zdog.easeInOut(progress % 1, 5);
+    let tween = Zdog.easeInOut(progress % 3, 20);
     illo.rotate.y = tween * Zdog.TAU;
     ticker++;
     anchor.rotate.set(viewRotation)
