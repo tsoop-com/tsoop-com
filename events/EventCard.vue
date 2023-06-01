@@ -11,19 +11,24 @@ const props = defineProps({
 
 const formatted = useDateFormat(() => props.event?.date, 'DD MMMM YYYY')
 
+const hashStr = str => str.split('').reduce((prev, curr) => Math.imul(31, prev) + curr.charCodeAt(0) | 0, 0);
+
 const background = computed(() => {
-  const hue = Math.floor(60 + 120 * Math.random());
+  const hash = hashStr(props.url)
+  const hue = hash % 360
   const saturation = 20 + Math.random() * 20;
   const lightness = 22 + Math.random() * 8;
-  return `linear-gradient(160deg, hsl(${hue},${saturation}%,${lightness}%) 0%, hsl(${hue},${saturation - 20}%,${lightness + 5}%) 70%, hsl(${hue},${saturation}%,${lightness - 10}%) 100%)`
+  return `
+  url(${props.event?.cover}) no-repeat top/100%,
+  linear-gradient(180deg, hsl(${hue},${saturation}%,${lightness}%) 0%, hsl(${hue}deg,${saturation - 10}%,${lightness + 5}%) 40%, hsl(${hue + 10}deg,${saturation}%,${lightness - 15}%) 100%)`
 })
 </script>
 
 <template lang='pug'>
-a.p-4.flex.flex-col.bg-dark-700.rounded-lg.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.gap-2.flex-1.max-w-90(:href="url" :style="{background}" )
-  img.max-w-full.min-w-50(:src="event.cover" v-if="event?.cover")
-  .flex-1
-  .text-xs {{ formatted }}
-  .text-3xl.font-bold {{ event.title }}
-  .text-xl {{ event.description }}
+a.overflow-hidden.pt-22.flex.flex-col.bg-dark-700.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.flex-1.opacity-50.hover-opacity-100(:href="url" :style="{background}" style="padding-bottom:0;padding-left:0; padding-right:0; flex: 1 1 auto" )
+  .bg-dark-100.p-2.bg-opacity-50.backdrop-blur-sm.hover-backdrop-blur-lg.transition
+    .flex-1
+    .text-xs {{ formatted }}
+    .text-2xl.font-bold {{ event.title }}
+    .text-md {{ event.description }}
 </template>

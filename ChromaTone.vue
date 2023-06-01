@@ -3,7 +3,7 @@
   a.panel(href="https://chromatone.center",target="_blank")
     img.m-4(src="/img/holologo.svg")
   .panel(v-if="targetIsVisible || loaded")
-    iframe.rounded-xl(
+    iframe.rounded-xl.mx-auto(
       width="320", 
       height="200", 
       src="https://www.youtube.com/embed/3_815sW-ZKY", 
@@ -13,7 +13,7 @@
       )
     .py-4 
       img(src="/img/ct-logo.svg")
-    .p-4
+    .p-4.text-start
       .text-lg.mb-6 We explore music visually with Chromatone – the universal color notation system. It's a simple visual music language, that involves 12 spectral colors met with 12 chromatic notes. Try it today!
       a.underline.text-2xl.font-bold(href="https://chromatone.center",target="_blank") chromatone.center 
     
@@ -39,7 +39,7 @@ watch(targetIsVisible, t => {
 }
 
 .panel {
-  @apply text-dark-300 py-2 flex flex-col items-center text-center;
+  @apply text-dark-300 py-2 flex flex-col text-start;
   flex: 1 1 300px;
 }
 </style>

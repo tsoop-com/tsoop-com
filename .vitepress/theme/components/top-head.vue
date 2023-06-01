@@ -1,6 +1,6 @@
 <template lang="pug">
 .row
-  z-logo.flex-1
+  top-logo.flex-1
   .title live multimedia generation
 </template>
 

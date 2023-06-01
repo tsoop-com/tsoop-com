@@ -147,7 +147,10 @@ openSource:
 
 <script setup>
 import EventRow from './events/EventRow.vue'
-  </script>
+import ChromaTone from './ChromaTone.vue'
+import ExpVisuals from './exp/ExpVisuals.vue'
+import ContactMe from './ContactMe.vue'
+</script>
 
 <top-head />
 
@@ -181,11 +184,11 @@ import EventRow from './events/EventRow.vue'
 
 <album-row :album="$frontmatter.albums.miracle" />
 
-<chromatone/>
+<chroma-tone/>
 
 <album-row :album="$frontmatter.albums.cassini" />
 
-<contact />
+<contact-me />
 
 <exp-visuals />
 

@@ -43,7 +43,7 @@ const props = defineProps({
 
 </script>
   
-<style scoped>
+<style scoped lang="postcss">
 .panel {
   @apply flex flex-col items-center justify-center p-2 sm_p-8;
   flex: 1 1 300px;

@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import REGL from 'regl';
 import { Hydra, generators, } from 'hydra-ts'
 import ArrayUtils from 'hydra-ts/src/lib/array-utils';

@@ -3,4 +3,8 @@ title: Fleck houdini experiments
 source: https://codepen.io/georgedoescode/pen/eYvjOMN
 ---
 
-<exp-fleck />
+<script setup>
+import FleckExp from './FleckExp.vue'
+</script>
+
+<fleck-exp />
