@@ -2,6 +2,7 @@
 title: MGM#21
 description: Deeper jams
 date: 2023-05-11
+cover: colors.jpg
 ---
 
 Music Geeks Meetup #21 - the live streaming music research with Denis and Alex. It's a recap of the event and of the whole stream available at Chromatone YouTube channel.

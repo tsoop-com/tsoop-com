@@ -6,3 +6,5 @@ cover: mgm23.png
 ---
 
 Let's jam and perform together!
+
+![](./cover.jpeg)

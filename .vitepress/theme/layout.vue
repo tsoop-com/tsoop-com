@@ -26,7 +26,7 @@ function scrollToTop() {
     nav-parents
       a.font-mono(href="/" @click="scrollToTop()") tsoop
     .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden(
-      :style="{background:`url(${page?.frontmatter?.cover}) no-repeat top center/100%`, height: !page?.frontmatter?.cover ? '90px':'30vh' }"
+      :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%`, height: !page?.frontmatter?.cover ? '90px':'40vh' }"
       )
     .p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.sticky.top-14.z-20(v-if="page?.frontmatter")
       .text-xl.font-bold {{ page?.frontmatter?.title }}

@@ -2,6 +2,7 @@
 title: MGM#19
 description: Deep jams and space vibes
 date: 2023-04-27
+cover: sunset.jpg
 ---
 
 <youtube-embed video="5dEk2JFSR4c"></youtube-embed>
