@@ -12,11 +12,6 @@ declare module '@vue/runtime-core' {
     About: typeof import('./.vitepress/theme/components/about.vue')['default']
     AboutUs: typeof import('./.vitepress/theme/components/about-us.vue')['default']
     AlbumRow: typeof import('./.vitepress/theme/components/album-row.vue')['default']
-    Contact: typeof import('./.vitepress/theme/components/contact.vue')['default']
-    ExpBlob: typeof import('./.vitepress/theme/components/exp/blob.vue')['default']
-    ExpFleck: typeof import('./.vitepress/theme/components/exp/fleck.vue')['default']
-    ExpVisuals: typeof import('./.vitepress/theme/components/exp/visuals.vue')['default']
-    ExpWaves: typeof import('./.vitepress/theme/components/exp/waves.vue')['default']
     JamDeezerCircle: typeof import('~icons/jam/deezer-circle')['default']
     LaAmazon: typeof import('~icons/la/amazon')['default']
     LaApple: typeof import('~icons/la/apple')['default']
@@ -33,7 +28,6 @@ declare module '@vue/runtime-core' {
     LaYoutube: typeof import('~icons/la/youtube')['default']
     LinkButton: typeof import('./.vitepress/theme/components/link-button.vue')['default']
     Links: typeof import('./.vitepress/theme/components/links.vue')['default']
-    Logo: typeof import('./.vitepress/theme/components/logo.vue')['default']
     NavChildren: typeof import('./.vitepress/theme/components/nav/NavChildren.vue')['default']
     NavParents: typeof import('./.vitepress/theme/components/nav/NavParents.vue')['default']
     NavSiblings: typeof import('./.vitepress/theme/components/nav/NavSiblings.vue')['default']
@@ -42,6 +36,5 @@ declare module '@vue/runtime-core' {
     UilBoombox: typeof import('~icons/uil/boombox')['default']
     VideoRow: typeof import('./.vitepress/theme/components/video-row.vue')['default']
     YoutubeEmbed: typeof import('./.vitepress/theme/components/youtube-embed.vue')['default']
-    ZLogo: typeof import('./.vitepress/theme/components/z/logo.vue')['default']
   }
 }

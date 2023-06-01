@@ -1,9 +1,10 @@
 cd .vitepress/dist
 
 git init
-git add -A
+git remote add origin git@github.com:tsoop-com/tsoop-com.git 
+git add . --force
 git commit -m 'deploy'
 
-git push -f git@github.com:tsoop-com/tsoop-com.git master:gh-pages
+git push -f origin HEAD:gh-pages
 
 cd -
