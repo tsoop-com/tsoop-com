@@ -1,4 +1,4 @@
-import{G as Ir,S as Lr,C as Br,P as qr,W as Nr,O as Vr,a as Ur,D as Yr,M as Gr,I as yi,b as Xr,c as Wr}from"./chunks/three.module.ffdf834d.js";import{p as Qr,o as Fi,c as Ii,e as $r}from"./chunks/framework.1a738440.js";const jr=`//
+import{G as Ir,S as Lr,C as Br,P as qr,W as Nr,O as Vr,a as Ur,D as Yr,M as Gr,I as yi,b as Xr,c as Wr}from"./chunks/three.module.50524d41.js";import{p as Qr,o as Fi,c as Ii,e as $r}from"./chunks/framework.1a738440.js";const jr=`//
   // GLSL textureless classic 3D noise "cnoise",
   // with an RSL-style periodic variant "pnoise".
   // Author:  Stefan Gustavson (stefan.gustavson@liu.se)
