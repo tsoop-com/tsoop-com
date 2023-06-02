@@ -1,11 +1,16 @@
 <script setup>
-
-import { data as events } from './events.data.js'
 import EventCard from './EventCard.vue'
+
+import { pages, cleanLink } from '../.vitepress/theme/composables/pages';
+const months = pages.value['/events/']
 </script>
 
 <template lang='pug'>
 .flex.flex-col.gap-8.py-8
-  .flex.flex-wrap.gap-4
-    event-card.p-2.bg-dark-400.shadow.flex-1(v-for="event in events" :key="event.frontmatter.date" :url="event.url" :event="event.frontmatter") 
+  .flex.flex-col.bg-dark-400.rounded(v-for="month in months" :key="month")
+    .p-4
+      .text-2xl {{ month?.frontmatter?.title }}
+      .text-md {{ month?.frontmatter?.description }}
+    .flex.flex-wrap.gap-4.p-4
+      event-card.p-2.bg-dark-400.shadow.flex-1(v-for="event in pages[cleanLink(month.url)].slice().reverse()" :key="event.frontmatter.date" :url="event.url" :event="event.frontmatter") 
 </template>

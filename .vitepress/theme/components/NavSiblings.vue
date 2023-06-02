@@ -1,5 +1,5 @@
 <script setup>
-import { usePages } from '../../composables/pages';
+import { usePages } from '../composables/pages';
 
 const { parents, siblings } = usePages()
 </script>

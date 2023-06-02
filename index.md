@@ -147,9 +147,7 @@ openSource:
 
 <script setup>
 import EventRow from './events/EventRow.vue'
-import ChromaTone from './ChromaTone.vue'
 import ExpVisuals from './exp/ExpVisuals.vue'
-import ContactMe from './ContactMe.vue'
 </script>
 
 <top-head />

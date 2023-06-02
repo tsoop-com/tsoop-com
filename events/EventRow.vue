@@ -1,12 +1,22 @@
 <script setup>
 import EventCard from './EventCard.vue'
 
-import { data as events } from './events.data.js'
+import { ref } from 'vue';
+import { pages, cleanLink } from '../.vitepress/theme/composables/pages';
+
+const events = ref([])
+
+pages.value['/events/'].forEach(m => {
+  const evs = pages.value[cleanLink(m.url)]
+  if (evs) {
+    evs.forEach(e => events.value.push(e))
+  }
+})
 
 const today = new Date().toISOString()
 
-const upcoming = events.filter(e => e.frontmatter.date >= today)
-const past = events.filter(e => e.frontmatter.date < today).slice(0, 5)
+const upcoming = events.value.filter(e => e.frontmatter.date >= today)
+const past = events.value.filter(e => e.frontmatter.date < today).slice(0, 5)
 </script>
 
 <template lang='pug'>

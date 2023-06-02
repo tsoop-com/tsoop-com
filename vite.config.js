@@ -9,12 +9,11 @@ import extractorPug from '@unocss/extractor-pug'
 
 import { defineConfig } from 'vite'
 
-
 export default defineConfig({
   lastUpdated: true,
   plugins: [
     Components({
-      dirs: ['.vitepress/theme/components'],
+      dirs: ['.vitepress/theme/components', 'components'],
       extensions: ['vue', 'ts'],
       directoryAsNamespace: true,
       collapseSamePrefixes: true,
@@ -54,5 +53,6 @@ export default defineConfig({
   },
   ssr: {
     noExternal: ['hydra-ts']
-  }
+  },
+
 })

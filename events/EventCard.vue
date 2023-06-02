@@ -25,7 +25,7 @@ const background = computed(() => {
 </script>
 
 <template lang='pug'>
-a.overflow-hidden.pt-22.flex.flex-col.bg-dark-700.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.flex-1.opacity-50.hover-opacity-100(:href="url" :style="{background}" style="padding-bottom:0;padding-left:0; padding-right:0; flex: 1 1 auto" )
+a.overflow-hidden.pt-42.flex.flex-col.bg-dark-700.shadow-lg.hover-bg-dark-200.hover-shadow-xl.transition.flex-1.opacity-50.hover-opacity-100.max-w-120.min-w-50(:href="url" :style="{background}" style="padding-bottom:0;padding-left:0; padding-right:0; flex: 1 1 auto" )
   .bg-dark-100.p-2.bg-opacity-50.backdrop-blur-sm.hover-backdrop-blur-lg.transition
     .flex-1
     .text-xs {{ formatted }}

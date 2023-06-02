@@ -110,6 +110,6 @@ function normalize(url) {
   return (url += url.endsWith("/") ? "" : "/");
 }
 
-function cleanLink(url) {
+export function cleanLink(url) {
   return url.replace(/\/[^/]*\.(html)$/, '/')
 }
