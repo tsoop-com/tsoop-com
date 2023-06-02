@@ -63,4 +63,8 @@ function scrollToTop() {
 nav a {
   @apply hover-bg-dark-50 bg-opacity-30 transition p-4 bg-dark-300 flex-auto flex items-center;
 }
+
+.content a {
+  @apply underline
+}
 </style>
