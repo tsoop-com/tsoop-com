@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, createContentLoader, } from 'vitepress'
 
 const meta = {
   title: "tsoop",
@@ -14,6 +14,9 @@ const meta = {
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
+import path from 'path'
+import { writeFileSync } from 'fs'
+import { Feed } from 'feed'
 
 const links = []
 
@@ -69,11 +72,53 @@ export default defineConfig({
       })
   },
   buildEnd: async ({ outDir }) => {
+    //SECTION - Sitemap
     const sitemap = new SitemapStream({ hostname: meta.url })
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     sitemap.pipe(writeStream)
     links.forEach((link) => sitemap.write(link))
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
+
+    //SECTION - RSS
+    //   const feed = new Feed({
+    //     title: 'tsoop',
+    //     description: 'Live multimedia collaborations',
+    //     id: meta.url,
+    //     link: meta.url,
+    //     language: 'en',
+    //     image: `${meta.url}img/circle.jpg`,
+    //     favicon: `${meta.url}favicon.ico`,
+    //     copyright:
+    //       'Copyright (c) 2018-present, Denis Starov.'
+    //   })
+
+    //   const events = await createContentLoader('events/**/*.md', {
+    //     render: true
+    //   }).load()
+
+    //   events.sort(
+    //     (a, b) =>
+    //       +new Date(b.frontmatter.date) -
+    //       +new Date(a.frontmatter.date)
+    //   )
+    //   for (const { url, frontmatter, html } of events) {
+    //     feed.addItem({
+    //       title: frontmatter.title,
+    //       id: `${meta.url}${url}`,
+    //       link: `${meta.url}${url}`,
+    //       description: frontmatter.description,
+    //       content: html,
+    //       author: [
+    //         {
+    //           name: 'Denis Starov',
+    //           email: 'davay@tsoop.com',
+    //           link: 'https://starovdenis.com'
+    //         }
+    //       ],
+    //       date: frontmatter.date
+    //     })
+    //   }
+    //   writeFileSync(path.join(outDir, 'feed.rss'), feed.rss2())
   }
 })
