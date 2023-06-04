@@ -160,11 +160,11 @@ import ExpVisuals from './exp/ExpVisuals.vue'
 
 <event-row />
 
-<video-row :list="$frontmatter.impro.video" />
+<video-row :list="$frontmatter.openSource.video" />
 
 <album-row id="best_exit" :album="$frontmatter.albums.best_exit" />
 
-<video-row :list="$frontmatter.openSource.video" />
+<video-row :list="$frontmatter.impro.video" />
 
 <album-row :album="$frontmatter.albums.circle" />
 

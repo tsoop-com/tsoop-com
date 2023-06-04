@@ -16,7 +16,7 @@ import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import path from 'path'
 import { writeFileSync } from 'fs'
-import { Feed } from 'feed'
+// import { Feed } from 'feed'
 
 const links = []
 
@@ -27,8 +27,6 @@ export default defineConfig({
   description: meta.description,
   lang: "en",
   head: [
-    ["script", { async: true, defer: true, "data-website-id": "8ad3b2eb-cf2e-4fa8-b2e4-28958b889bd4", src: "https://stats.defucc.me/umami.js" }],
-
     ["meta", { name: "author", content: meta.author }],
     ["meta", { name: "keywords", content: meta.tags }],
     ["link", { rel: "icon", type: "image/svg+xml", href: meta.icon }],
@@ -50,6 +48,7 @@ export default defineConfig({
       image = 'media_files/cover/' + url.split('/').join('-') + ctx.pageData.frontmatter?.cover
     }
     return [
+      process.env.NODE_ENV === "production" ? ["script", { async: true, defer: true, "data-website-id": "8ad3b2eb-cf2e-4fa8-b2e4-28958b889bd4", src: "https://stats.defucc.me/umami.js" }] : null
       ['meta', { property: 'og:title', content: ctx.pageData.title + ' | tsoop.com' }],
       ['meta', { property: 'og:description', content: ctx.pageData.description }],
       ['meta', { property: 'og:url', content: meta.url + url }],
@@ -80,7 +79,7 @@ export default defineConfig({
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
 
-    //SECTION - RSS
+    //SECTION - RSS https://laros.io/generating-an-rss-feed-with-vitepress
     //   const feed = new Feed({
     //     title: 'tsoop',
     //     description: 'Live multimedia collaborations',
