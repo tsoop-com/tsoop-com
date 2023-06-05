@@ -1,56 +1,59 @@
 import { ref, computed, watchEffect, watch } from 'vue';
-import { data } from '../../../pages.data.js'
 import { useRoute } from 'vitepress'
 
-export const pages = computed(() => getPages(data))
+const pages = ref()
 
-export function usePages(routes = data) {
+const initiated = ref(false)
 
-  const route = useRoute()
+export function usePages(routes) {
   const children = ref()
   const parents = ref()
   const siblings = ref()
 
-  watch(() => route.path, p => {
-    p = cleanLink(p)
-    children.value = pages.value[p]?.reverse()
-    siblings.value = getSiblings(p, pages.value)
+  const route = useRoute()
+  pages.value = getPages(routes)
+
+  // if (!initiated.value) {
+  watchEffect(() => {
+    const p = cleanLink(route.path)
+    children.value = pages.value[p]
+    siblings.value = getSiblings(p, routes)
     parents.value = getParents(p, routes)
-  }, { immediate: true })
+  })
+  //   initiated.value = true
+  //   if (import.meta.hot) {
+  //     import.meta.hot.on('vue-reload', () => {
+  //       initiated.value = false
+  //     })
+  //   }
+  // }
 
   return {
     routes, pages, siblings, children, parents
   }
 }
 
-export function useChildren(routes = data) {
+export function useChildren(routes) {
   const route = useRoute()
   const children = ref()
+  pages.value = pages.value || getPages(routes)
   watchEffect(() => {
-    const p = cleanLink(route.path)
-    children.value = pages.value[p]?.sort((a, b) => {
-      if (a.frontmatter?.date && b.frontmatter?.date) {
-        return a.frontmatter.date > b.frontmatter.date ? -1 : 1;
-      } else {
-        return 0;
-      }
-    }).reverse();
+    children.value = pages.value[cleanLink(route.path)]
   },)
   return children
 }
 
-export function useParents(routes = data) {
+export function useParents(routes) {
   const route = useRoute()
   const parents = ref()
   watchEffect(() => {
-    const p = cleanLink(route.path)
-    parents.value = getParents(p, routes)
+    parents.value = getParents(route.path, routes)
     parents.value.pop()
   },)
   return parents
 }
 
-function getPages(routes) {
+export function getPages(routes) {
   let pages = {}
   for (let route of routes) {
     if (route.url == '/') continue
@@ -72,7 +75,8 @@ function getPages(routes) {
 }
 
 
-function getParents(path, routes) {
+export function getParents(path, routes) {
+  path = cleanLink(path)
   const parents = [];
   const url = path.split("/").filter(Boolean);
   for (let i = 0; i <= url.length; i++) {
@@ -87,11 +91,11 @@ function getParents(path, routes) {
 }
 
 
-function getSiblings(path, pages) {
+export function getSiblings(path, routes) {
   let prev, next, index, total
   const folder = normalize(path.split("/").slice(0, -2).join("/"));
-  const list = pages[folder];
-
+  pages.value = getPages(routes)
+  const list = pages.value[folder];
   if (list) {
     total = list.length
     index = list.findIndex((page) => cleanLink(page.url) == cleanLink(path));
@@ -106,7 +110,7 @@ function getSiblings(path, pages) {
 }
 
 
-function normalize(url) {
+export function normalize(url) {
   return (url += url.endsWith("/") ? "" : "/");
 }
 

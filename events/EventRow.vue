@@ -2,9 +2,12 @@
 import EventCard from './EventCard.vue'
 
 import { ref } from 'vue';
-import { pages, cleanLink } from '../.vitepress/theme/composables/pages';
+import { usePages, cleanLink } from '../src/browser';
+import { data } from '../pages.data.js'
 
 const events = ref([])
+
+const { pages } = usePages(data)
 
 pages.value['/events/'].forEach(m => {
   const evs = pages.value[cleanLink(m.url)]

@@ -1,7 +1,10 @@
 <script setup>
 import EventCard from './EventCard.vue'
 
-import { pages, cleanLink } from '../.vitepress/theme/composables/pages';
+import { usePages, cleanLink } from '../src/browser';
+import { data } from '../pages.data.js'
+
+const { pages } = usePages(data)
 const months = pages.value['/events/']
 </script>
 
