@@ -1,8 +1,9 @@
 <script setup>
 import { useParents } from './browser'
 import { data } from '../pages.data.js'
+import { useRoute } from 'vitepress';
 
-const parents = useParents(data)
+const parents = useParents(useRoute(), data)
 </script>
 
 <template lang='pug'>

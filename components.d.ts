@@ -30,6 +30,7 @@ declare module '@vue/runtime-core' {
     LaYoutube: typeof import('~icons/la/youtube')['default']
     LinkButton: typeof import('./components/link-button.vue')['default']
     Links: typeof import('./components/links.vue')['default']
+    NavCard: typeof import('./src/NavCard.vue')['default']
     NavChildren: typeof import('./src/NavChildren.vue')['default']
     NavParents: typeof import('./src/NavParents.vue')['default']
     NavSiblings: typeof import('./src/NavSiblings.vue')['default']

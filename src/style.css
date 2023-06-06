@@ -1,0 +1,10 @@
+nav a {
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-size: 100% !important;
+	background-clip: border-box;
+}
+
+nav a > div {
+	@apply flex items-center gap-2 p-4 bg-dark-300 bg-opacity-50 backdrop-blur-none hover-backdrop-blur-sm transition;
+}

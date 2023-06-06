@@ -3,8 +3,9 @@ import EventCard from './EventCard.vue'
 
 import { usePages, cleanLink } from '../src/browser';
 import { data } from '../pages.data.js'
+import { useRoute } from 'vitepress';
 
-const { pages } = usePages(data)
+const { pages } = usePages(useRoute(), data)
 const months = pages.value['/events/']
 </script>
 

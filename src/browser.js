@@ -1,11 +1,11 @@
 import { ref, computed, watchEffect, watch } from 'vue';
 import { useRoute } from 'vitepress'
+import './style.css'
 
 export const pages = ref()
 
 
-export function usePages(routes) {
-  const route = useRoute()
+export function usePages(route, routes) {
 
   pages.value = pages.value || getPages(routes)
 
@@ -18,14 +18,12 @@ export function usePages(routes) {
   }
 }
 
-export function useChildren(routes) {
+export function useChildren(route, routes) {
   pages.value = pages.value || getPages(routes)
-  const route = useRoute()
   return computed(() => pages.value[cleanLink(route.path)])
 }
 
-export function useParents(routes) {
-  const route = useRoute()
+export function useParents(route, routes) {
   return computed(() => getParents(route.path, routes).slice(0, -1))
 }
 

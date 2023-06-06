@@ -22,8 +22,10 @@ function scrollToTop() {
 
 <template lang="pug">
 .page.relative.flex.flex-col.min-h-100vh
+
   template(v-if="frontmatter.home")
     content
+
   template(v-else)
     nav-parents
       a.font-mono(href="/" @click="scrollToTop()") tsoop
@@ -36,6 +38,9 @@ function scrollToTop() {
     content.content.p-4.bg-dark-300
     nav-children
     nav-siblings
+  .h-50.bg-dark-400.flex.flex-col.items-center.justify-center
+    a.text-3xl(href="/") tsoop
+    .text-sm.p-2 live multimedia generation
 </template>
 
 

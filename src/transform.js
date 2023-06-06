@@ -4,7 +4,11 @@ import * as path from "path";
 import sharp from "sharp";
 
 
-export function transformPages({ publicFolder = "public", mediaFolder = 'media_files', mediaTypes = { cover: { size: 1200, height: 1000, fit: "inside" } } } = options) {
+export function transformPages({ publicFolder = "public", mediaFolder = 'media_files', mediaTypes = { cover: { size: 1200, height: 1000, fit: "inside" } } } = {
+  publicFolder: 'public',
+  mediaFolder: 'media_files',
+  mediaTypes: { cover: { size: 1200, height: 1000, fit: "inside" } }
+}) {
   return async function transform(routes) {
 
     const root = url.fileURLToPath(new URL('..', import.meta.url))
