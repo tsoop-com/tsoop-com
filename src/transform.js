@@ -4,7 +4,7 @@ import * as path from "path";
 import sharp from "sharp";
 
 
-export function transform(routes, { publicFolder, mediaFolder, mediaTypes } = {
+export async function transform(routes, { publicFolder, mediaFolder, mediaTypes } = {
   publicFolder: 'public',
   mediaFolder: 'media_files',
   mediaTypes: {
@@ -14,10 +14,10 @@ export function transform(routes, { publicFolder, mediaFolder, mediaTypes } = {
 
   const root = url.fileURLToPath(new URL('..', import.meta.url))
 
-  return routes.sort((a, b) => {
-    return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
-  }).map(page => {
+  for (let r in routes) {
+    const page = routes[r]
     const data = page.frontmatter
+
     for (let media in mediaTypes) {
       if (data[media]) {
         let file = data[media];
@@ -46,11 +46,15 @@ export function transform(routes, { publicFolder, mediaFolder, mediaTypes } = {
             fullPath
           );
         } else {
-          sharp(path.resolve(root, filePath.substring(1)))
+          await sharp(path.resolve(root, filePath.substring(1)))
             .resize({
               width: mediaTypes[media].width,
               height: mediaTypes[media].height,
               fit: "inside",
+            })
+            .png({
+              force: false,
+              quality: 30
             })
             .toFile(fullPath, (err, info) => {
               if (err) {
@@ -60,6 +64,9 @@ export function transform(routes, { publicFolder, mediaFolder, mediaTypes } = {
         }
       }
     }
-    return page
+  }
+
+  return routes.sort((a, b) => {
+    return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
   })
 }
