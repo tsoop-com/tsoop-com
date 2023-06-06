@@ -1,7 +1,7 @@
 <script setup>
 import EventCard from './EventCard.vue'
 
-import { usePages, cleanLink } from 'vitepress-pages/browser';
+import { usePages, cleanLink } from 'vitepress-pages/client';
 import { data } from '../pages.data.js'
 import { useRoute } from 'vitepress';
 

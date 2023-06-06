@@ -14,13 +14,18 @@ const props = defineProps({
   </a>
 </template>
 
-<style>
+<style lang="postcss">
 nav a {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 100% !important;
   background-clip: border-box;
-  @apply no-repeat flex;
+  opacity: 0.5;
+  transition: all 300ms ease;
+}
+
+nav a:hover {
+  opacity: 1;
 }
 
 nav a>div {
@@ -28,7 +33,7 @@ nav a>div {
 }
 
 nav a h4 {
-  @apply text-sm;
+  font-size: 16px;
   flex: 1 1 100%;
 }
 </style>
