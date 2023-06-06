@@ -1,7 +1,7 @@
 ---
 title: MGM#3
 description: New Year fun
-date: 2023-01-06
+date: 2023-01-05
 cover: thumbnail.jpg
 ---
 

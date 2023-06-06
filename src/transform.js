@@ -6,14 +6,15 @@ import sharp from "sharp";
 import { cleanLink } from './browser';
 
 
-export function transformPages({ publicFolder = "public", mediaFolder = 'media_files', mediaTypes = { cover: { size: 1200, height: 1000, fit: "inside" } } } = {
-  publicFolder: 'public',
-  mediaFolder: 'media_files',
-  mediaTypes: { cover: { size: 1200, height: 1000, fit: "inside" } }
-}) {
+export function transformPages({
+  rootFolder = '../',
+  publicFolder = "public",
+  mediaFolder = 'media_files',
+  mediaTypes = { cover: { size: 1200, height: 1000, fit: "inside" } }
+} = options) {
   return async function transform(routes) {
 
-    const root = url.fileURLToPath(new URL('../', import.meta.url))
+    const root = url.fileURLToPath(new URL(rootFolder, import.meta.url))
 
     for (let r in routes) {
       const page = routes[r]
@@ -28,7 +29,7 @@ export function transformPages({ publicFolder = "public", mediaFolder = 'media_f
           const fullPath = path.join(publicPath, fileName)
           const url = path.join("/", mediaFolder, media, fileName);
 
-          // The actual transform is down here
+          // The actual frontmatter transform is happening here
           routes[r].frontmatter[media] = url;
 
           if (fs.existsSync(fullPath)) {
@@ -73,7 +74,7 @@ export function transformPages({ publicFolder = "public", mediaFolder = 'media_f
     }
 
     return routes.sort((a, b) => {
-      return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
+      return +new Date(b.frontmatter?.date) - +new Date(a.frontmatter?.date)
     })
   }
 }

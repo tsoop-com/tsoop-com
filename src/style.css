@@ -3,8 +3,14 @@ nav a {
 	background-position: center !important;
 	background-size: 100% !important;
 	background-clip: border-box;
+	@apply no-repeat flex;
 }
 
 nav a > div {
-	@apply flex items-center gap-2 p-4 bg-dark-300 bg-opacity-50 backdrop-blur-none hover-backdrop-blur-sm transition;
+	@apply flex flex-wrap items-center gap-0 p-4 bg-dark-300 bg-opacity-50 backdrop-blur-none hover-backdrop-blur-sm transition;
+}
+
+nav a h4 {
+	@apply text-sm;
+	flex: 1 1 100%;
 }

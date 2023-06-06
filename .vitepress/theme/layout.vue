@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 
 import { data as routes } from '../../pages.data.js'
+import { useDateFormat } from '@vueuse/core';
 
 const { frontmatter } = useData()
 
@@ -16,6 +17,7 @@ function scrollToTop() {
   window.scroll(0, 0)
 }
 
+const date = useDateFormat(() => page.value?.frontmatter?.date, 'DD MMMM YYYY, dddd')
 
 </script>
 
@@ -29,12 +31,16 @@ function scrollToTop() {
   template(v-else)
     nav-parents
       a.font-mono(href="/" @click="scrollToTop()") tsoop
-    .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden(
-      :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%`, height: !page?.frontmatter?.cover ? '90px':'40vh' }"
-      )
+    transition(name="fade" mode="out-in")
+      .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden(
+        :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%`, height: !page?.frontmatter?.cover ? '90px':'40vh' }"
+        :key="page?.url"
+        )
     .p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.sticky.top-14.z-20.max-w-55ch(v-if="page?.frontmatter")
-      .text-xl.font-bold {{ page?.frontmatter?.title }}
-      .text-sm {{ page?.frontmatter?.description }}
+      .text-sm {{ date }}
+      .text-md
+      .text-3xl.font-bold {{ page?.frontmatter?.title }}
+      .text-md {{ page?.frontmatter?.description }}
     content.content.p-4.bg-dark-300
   nav-children
   nav-siblings

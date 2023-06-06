@@ -8,7 +8,8 @@ const props = defineProps({
   <a v-if="page" :href="page?.url" :style="{ background: `url(${page?.frontmatter?.cover})` }">
     <div>
       <slot></slot>
-      {{ page?.frontmatter?.title }}
+      <h3>{{ page?.frontmatter?.title }}</h3>
+      <h4>{{ page?.frontmatter?.description }}</h4>
     </div>
   </a>
 </template>
