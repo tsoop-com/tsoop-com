@@ -1,6 +1,6 @@
 <script setup>
-import { useParents } from './browser'
-import { data } from '../pages.data.js'
+import { useParents } from 'vitepress-pages/browser'
+import { data } from '../../../pages.data.js'
 import { useRoute } from 'vitepress';
 
 const parents = useParents(useRoute(), data)

@@ -4,13 +4,14 @@ import { useData, useRoute } from 'vitepress'
 
 import { data as routes } from '../../pages.data.js'
 import { useDateFormat } from '@vueuse/core';
+import { cleanLink } from 'vitepress-pages/browser'
 
 const { frontmatter } = useData()
 
 const route = useRoute()
 
 const page = computed(() => routes.find(r => {
-  return r.url.replace(/\/[^/]*\.(html)$/, '/') == route.path.replace(/\/[^/]*\.(html)$/, '/')
+  return cleanLink(r.url) == cleanLink(route.path)
 }))
 
 function scrollToTop() {

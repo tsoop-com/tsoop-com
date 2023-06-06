@@ -78,6 +78,8 @@ export default defineConfig({
     links.forEach((link) => sitemap.write(link))
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
+  }
+})
 
     //SECTION - RSS https://laros.io/generating-an-rss-feed-with-vitepress
     //   const feed = new Feed({
@@ -119,5 +121,4 @@ export default defineConfig({
     //     })
     //   }
     //   writeFileSync(path.join(outDir, 'feed.rss'), feed.rss2())
-  }
-})
+

@@ -1,6 +1,6 @@
 <script setup>
-import { useChildren } from './browser';
-import { data } from '../pages.data.js'
+import { useChildren } from 'vitepress-pages/browser';
+import { data } from '../../../pages.data.js'
 import NavCard from './NavCard.vue';
 import { useRoute } from 'vitepress';
 

@@ -2,7 +2,7 @@
 import EventCard from './EventCard.vue'
 
 import { ref } from 'vue';
-import { usePages, cleanLink } from '../src/browser';
+import { usePages, cleanLink } from 'vitepress-pages/browser';
 import { data } from '../pages.data.js'
 import { useRoute } from 'vitepress';
 

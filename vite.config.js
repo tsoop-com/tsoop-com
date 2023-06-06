@@ -13,7 +13,7 @@ export default defineConfig({
   lastUpdated: true,
   plugins: [
     Components({
-      dirs: ['.vitepress/theme/components', 'components', 'src'],
+      dirs: ['.vitepress/theme/components', 'components'],
       extensions: ['vue', 'ts'],
       directoryAsNamespace: true,
       collapseSamePrefixes: true,
