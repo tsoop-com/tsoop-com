@@ -158,7 +158,7 @@ import ExpVisuals from './exp/ExpVisuals.vue'
 
 <about-us class="row" />
 
-<event-row />
+<event-row folder="/events/mgm/" />
 
 <video-row :list="$frontmatter.openSource.video" />
 

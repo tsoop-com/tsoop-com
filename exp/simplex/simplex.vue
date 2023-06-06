@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted, computed } from 'vue'
 import { createNoise3D, createNoise2D } from 'simplex-noise';
 import { useStorage, onKeyStroke, useFullscreen } from '@vueuse/core'
 import { useClamp } from '@vueuse/math'

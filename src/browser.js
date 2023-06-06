@@ -1,38 +1,31 @@
-import { ref, computed, watchEffect, watch } from 'vue';
-import { useRoute } from 'vitepress'
+import { computed } from 'vue'
 import './style.css'
-
-export const pages = ref()
-
 
 export function usePages(route, routes) {
 
-  pages.value = pages.value || getPages(routes)
-
+  const pages = computed(() => getPages(routes))
   const children = computed(() => pages.value[cleanLink(route.path)])
   const parents = computed(() => getParents(route.path, routes))
   const siblings = computed(() => getSiblings(route.path, routes))
 
   return {
-    routes, pages, siblings, children, parents
+    pages, siblings, children, parents
   }
 }
 
 export function useChildren(route, routes) {
-  pages.value = pages.value || getPages(routes)
-  return computed(() => pages.value[cleanLink(route.path)])
+  return computed(() => getPages(routes)[cleanLink(route.path)])
 }
 
 export function useParents(route, routes) {
-  return computed(() => getParents(route.path, routes).slice(0, -1))
+  return computed(() => getParents(route.path, routes))
 }
 
 export function getPages(routes) {
   let pageList = {}
   for (let route of routes) {
     if (route.url == '/') continue
-    const split = route.url.split("/").slice(0, -2).join("/");
-    const folder = normalize(split);
+    const folder = normalize(route.url.split("/").slice(0, -2).join("/"))
     pageList[folder] = pageList[folder] || [];
     pageList[folder].push(route);
   }
@@ -68,8 +61,7 @@ export function getParents(path, routes) {
 export function getSiblings(path, routes) {
   let prev, next, index, total
   const folder = normalize(path.split("/").slice(0, -2).join("/"));
-  pages.value = pages.value || getPages(routes)
-  const list = pages.value[folder]
+  const list = getPages(routes)[folder]
 
   if (list) {
     total = list.length

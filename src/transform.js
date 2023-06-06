@@ -3,6 +3,8 @@ import * as fs from "fs";
 import * as path from "path";
 import sharp from "sharp";
 
+import { cleanLink } from './browser';
+
 
 export function transformPages({ publicFolder = "public", mediaFolder = 'media_files', mediaTypes = { cover: { size: 1200, height: 1000, fit: "inside" } } } = {
   publicFolder: 'public',
@@ -11,21 +13,22 @@ export function transformPages({ publicFolder = "public", mediaFolder = 'media_f
 }) {
   return async function transform(routes) {
 
-    const root = url.fileURLToPath(new URL('..', import.meta.url))
+    const root = url.fileURLToPath(new URL('../', import.meta.url))
 
     for (let r in routes) {
       const page = routes[r]
       const data = page.frontmatter
 
       for (let media in mediaTypes) {
-        if (data[media]) {
+        if (data[media] && !data[media].includes(mediaFolder)) {
           let file = data[media];
-          const filePath = path.join(page.url.replace(/\/[^/]*\.(html)$/, '/'), file);
+          const filePath = path.join(cleanLink(page.url), file);
           const fileName = filePath.split("/").filter(Boolean).join("-");
           const publicPath = path.resolve(root, publicFolder, mediaFolder, media);
           const fullPath = path.join(publicPath, fileName)
           const url = path.join("/", mediaFolder, media, fileName);
 
+          // The actual transform is down here
           routes[r].frontmatter[media] = url;
 
           if (fs.existsSync(fullPath)) {
