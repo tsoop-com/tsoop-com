@@ -40,7 +40,7 @@
 		"simplex-noise": "4.0.1",
 		"three": "^0.153.0",
 		"tone": "^14.8.49",
-		"vitepress-pages": "2.0.0-beta.5",
+		"vitepress-pages": "2.0.0-beta.6",
 		"vue": "^3.3.4",
 		"webmidi": "^3.1.5",
 		"zdog": "^1.1.3"
