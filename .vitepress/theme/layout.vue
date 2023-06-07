@@ -8,7 +8,7 @@ createCommentVNode()
 
 import { data } from '../../pages.data.js'
 import { useDateFormat } from '@vueuse/core';
-import { cleanLink, usePages } from 'vitepress-pages/client'
+import { cleanLink, usePages } from 'vitepress-pages'
 
 const { frontmatter } = useData()
 
