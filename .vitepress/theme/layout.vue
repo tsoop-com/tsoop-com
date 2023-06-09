@@ -1,14 +1,17 @@
 <script setup>
 import { computed } from 'vue'
-import { useData, useRoute } from 'vitepress'
+
 
 // IDK why is there an error of unused createCommentVNode, but this is a temporary fix
 import { createCommentVNode } from 'vue'
 createCommentVNode()
 
+import { useData, useRoute } from 'vitepress'
 import { data } from '../../pages.data.js'
-import { useDateFormat } from '@vueuse/core';
 import { cleanLink, usePages } from 'vitepress-pages'
+
+import { useDateFormat } from '@vueuse/core';
+
 
 const { frontmatter } = useData()
 
