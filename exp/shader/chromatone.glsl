@@ -30,7 +30,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   float radius = zoom * .12 * iResolution.y;
 
   // Background layer
-  vec4 layer1 = vec4(vec3(abs(sin(iTime * .5) * .1)), 1.);
+  vec4 layer1 = vec4(vec3(.0), 1.);
 
   for(float i = 0.; i < 12.; i++) {
 
