@@ -26,6 +26,7 @@ export default defineConfig({
   title: meta.title,
   description: meta.description,
   lang: "en",
+  assetsInclude: ['**/*.glsl'],
   head: [
     ["meta", { name: "author", content: meta.author }],
     ["meta", { name: "keywords", content: meta.tags }],

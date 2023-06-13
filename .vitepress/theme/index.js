@@ -11,7 +11,13 @@ import { GesturePlugin } from '@vueuse/gesture'
 export default {
   Layout,
   NotFound,
-  enhanceApp({ app }) {
-    app.use(GesturePlugin)
-  },
+  async enhanceApp({ app }) {
+
+    if (!import.meta.env.SSR) {
+      const glsl = await import('vue-glsl')
+
+      app.use(GesturePlugin);
+      app.use(glsl.default)
+    }
+  }
 }

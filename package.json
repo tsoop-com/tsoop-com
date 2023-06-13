@@ -42,6 +42,7 @@
 		"tone": "^14.8.49",
 		"vitepress-pages": "2.0.0-beta.8",
 		"vue": "^3.3.4",
+		"vue-glsl": "^1.1.27",
 		"webmidi": "^3.1.5",
 		"zdog": "^1.1.3"
 	},
