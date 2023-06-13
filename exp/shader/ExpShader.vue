@@ -1,26 +1,22 @@
-<script>
+<script setup>
+import { ref, computed } from 'vue'
 import shader from './start.glsl?raw'
 
-export default {
-  data() {
-    return {
-      light: 0,
-      shaderCode: shader,
-    }
-  },
-  methods: {
-    glslUpdate(tickData) {
-      //console.log(tickData);
-      this.light = (Math.sin(tickData.iTime) + 1) / 2;
-    }
-  }
-};
+const light = ref(0)
+
+const shaderCode = computed(() => shader)
+
+function glslUpdate(tickData) {
+  console.log(tickData.iResolution);
+  light.value = (Math.sin(tickData.iTime * 20) + 1) / 2;
+}
+
 </script>
 
 <template lang='pug'>
-.absolute.top-0.right-0.left-0.bottom-0
+.min-h-80vh.h-100vh
   gl-canvas(@update="glslUpdate")
     gl-program(name="main", :code="shaderCode")
-      gl-float(name="u_light", :value="light").
+      gl-float(name="u_light", :value="light")
 
 </template>

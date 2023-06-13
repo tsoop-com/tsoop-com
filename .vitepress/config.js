@@ -7,6 +7,7 @@ const meta = {
   tags: "electronic, music, live, generation, jam, tsoop, op-z, op-1, nts-1, zoom r-16, fusion",
   icon: "/img/tsoop-icon.svg",
   cover: "/img/exit.jpg",
+  image: 'img/drops.jpg',
   site: "tsoop.com",
   url: "https://tsoop.com/"
 };

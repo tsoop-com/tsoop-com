@@ -25,9 +25,9 @@ void mainImage(out vec4 fragColor,in vec2 fragCoord){
     
     float d=length(uv)*exp(-length(uv0));
     
-    vec3 col=palette(length(uv0)+i*.4+iTime*.4);
+    vec3 col=palette(length(uv0)+i*.1+iTime*.1);
     
-    d=sin(d*8.+iTime)/8.;
+    d=sin(d*8.+iTime*.2)/8.;
     d=abs(d);
     
     d=pow(.01/d,1.2);
