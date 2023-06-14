@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import shader from './chromatone.glsl?raw'
-import { useTransition } from '@vueuse/core';
+import { TransitionPresets, useTransition } from '@vueuse/core';
 
 
 // function createWebGLTexture(array) {
@@ -31,7 +31,10 @@ const shaderCode = computed(() => shader)
 
 const notes = ref(Array.from({ length: 12 }, () => Math.random()))
 
-const output = useTransition(notes)
+const output = useTransition(notes, {
+  duration: 200,
+  transition: TransitionPresets.easeInOutExpo
+})
 
 // const notesTexture = computed(() => createWebGLTexture(notes.value))
 

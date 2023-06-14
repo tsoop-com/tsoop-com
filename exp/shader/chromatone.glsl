@@ -44,7 +44,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     vec3 color = hsv2rgb(vec3(i / 12., velocity, .8));
 
-    vec4 layer2 = circle(uv, position, radius, color);
+    vec4 layer2 = circle(uv, position, radius * velocity + 1., color);
 
     layer1 = mix(layer1, layer2, layer2.a);
   }
