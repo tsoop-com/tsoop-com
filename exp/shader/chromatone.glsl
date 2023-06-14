@@ -17,7 +17,7 @@ float hash11(float p) {
 */
 vec4 circle(vec2 uv, vec2 pos, float rad, vec3 color) {
   float d = length(pos - uv) - rad;
-  float t = smoothstep(.0, 1., d);
+  float t = smoothstep(.04, 1., d);
   return vec4(color, 1. - t);
 }
 

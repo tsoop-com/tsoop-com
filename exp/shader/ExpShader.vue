@@ -1,42 +1,31 @@
 <script setup>
 import { ref, computed } from 'vue'
-import shader from './chromatone.glsl?raw'
-import { TransitionPresets, useTransition } from '@vueuse/core';
+import shader from './start.glsl?raw'
+import { TransitionPresets, refDebounced, useTransition } from '@vueuse/core';
+import { useMidi } from 'use-chromatone'
+import { useWindowSize } from '@vueuse/core'
 
-
-// function createWebGLTexture(array) {
-//   const canvas = document.createElement('canvas');
-//   const gl = canvas.getContext('webgl');
-
-//   const data = new Float32Array(array.length * 4);
-//   for (let i = 0; i < array.length; i++) {
-//     data[i * 4] = array[i];
-//   }
-
-//   const texture = gl.createTexture();
-//   gl.bindTexture(gl.TEXTURE_2D, texture);
-//   gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, array.length, 1, 0, gl.RGBA, gl.FLOAT, data);
-
-//   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-//   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-//   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-//   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-//   return texture;
-// }
-
+const { width, height } = useWindowSize()
 
 const light = ref(0)
 
+const { midi } = useMidi()
+
 const shaderCode = computed(() => shader)
 
-const notes = ref(Array.from({ length: 12 }, () => Math.random()))
-
-const output = useTransition(notes, {
-  duration: 200,
-  transition: TransitionPresets.easeInOutExpo
+const notes = computed(() => {
+  let chroma = new Array(12).fill(0)
+  for (let num in midi?.activeNotes) {
+    const n = (Number(num) - 9) % 12
+    chroma[n] = midi?.activeNotes[num] || 0
+  }
+  return chroma
 })
 
-// const notesTexture = computed(() => createWebGLTexture(notes.value))
+const output = useTransition(notes, {
+  duration: 100,
+  transition: TransitionPresets.easeOutCubic
+})
 
 const notesMat4 = computed(() => {
   const mat = Array(16).fill(0);
@@ -45,7 +34,6 @@ const notesMat4 = computed(() => {
 });
 
 function glslUpdate(tickData) {
-  // console.log(tickData.iResolution);
   light.value = (Math.sin(tickData.iTime) + 1) / 2;
 }
 
@@ -53,15 +41,21 @@ function mixNotes() {
   notes.value = notes.value.map(el => Math.random())
 }
 
+const resized = computed(() => {
+  if (width.value || height.value) {
+    return Math.random()
+  }
+  return 0
+})
 
+const debounced = refDebounced(resized, 100)
 
 </script>
 
 <template lang='pug'>
 .min-h-80vh.h-100vh(@click="mixNotes")
-  gl-canvas(@update="glslUpdate")
+  gl-canvas(@update="glslUpdate" :key="debounced")
     gl-program(name="main", :code="shaderCode")
       gl-float(name="u_light", :value="light")
       gl-mat4(name="u_notes", :value="notesMat4")
-      //- gl-image(name="u_notesTexture" :value="notesTexture.value")
 </template>

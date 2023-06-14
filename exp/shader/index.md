@@ -1,10 +1,9 @@
 ---
-title: Chromatone shader
-description: A MIDI reactive shader with a circle of 12 Chromatone colored glowing notes.
+title: GPU lights
+description: GLSL shader display
 date: 2023-06-18
+cover: cover.png
 ---
-
-
 
 <script setup>
 import { defineClientComponent } from 'vitepress'
@@ -16,5 +15,3 @@ const ExpShader = defineClientComponent(() => {
 </script>
 
 <ExpShader></ExpShader>
-
-Let's use GPU power to visualize music notes!
