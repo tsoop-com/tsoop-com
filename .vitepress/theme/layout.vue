@@ -99,7 +99,7 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
 }
 
 .content p {
-  @apply my-4 max-w-50ch;
+  @apply m-4 max-w-50ch;
 }
 
 nav a {
@@ -111,10 +111,10 @@ nav a {
 }
 
 .content h1 {
-  @apply text-3xl font-bold;
+  @apply text-3xl font-bold m-4;
 }
 
 .content h2 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold m-4;
 }
 </style>
