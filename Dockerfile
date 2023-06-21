@@ -4,6 +4,7 @@ FROM node:lts
 # Set the working directory
 WORKDIR /app
 
+RUN npm install -g pnpm
 # Copy package.json and package-lock.json (if available) and install dependencies
 COPY package*.json ./
 RUN pnpm install
