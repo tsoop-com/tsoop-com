@@ -11,6 +11,10 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   lastUpdated: true,
+  server: {
+    port: 3012,
+    strictPort: true
+  },
   plugins: [
     Components({
       dirs: ['.vitepress/theme/components', 'components'],

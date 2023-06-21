@@ -19,8 +19,8 @@
 	"scripts": {
 		"build": "vitepress build ",
 		"deploy": "sh deploy.sh",
-		"dev": "vitepress dev ",
-		"serve": "vitepress serve --port 5005"
+		"dev": "vitepress dev --port 3011 --host",
+		"serve": "vitepress build && vitepress serve --port 3012 --host"
 	},
 	"dependencies": {
 		"@unocss/reset": "0.52.7",
