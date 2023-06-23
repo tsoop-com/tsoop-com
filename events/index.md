@@ -1,14 +1,14 @@
 ---
 title: Events
-description: tsoop is a base station for musicians to collaborate in any place and at any time. 
+description: >-
+  tsoop is a base station for musicians to collaborate in any place and at any
+  time.
 cover: cover.jpg
 ---
-
-
-
 <script setup>
 import EventRow from './EventRow.vue'
 </script>
+
 We are a portable music lab capable of producing high quality live music. And here's how we implement it in real life. You can participate too!
 
 ## Music Geeks Meetups
