@@ -1,11 +1,13 @@
 <script setup>
+import { cleanLink } from 'vitepress-pages'
 const props = defineProps({
   page: { type: Object, default: () => ({}) }
 })
+
 </script>
 
 <template>
-  <a v-if="page" :href="page?.url" :style="{ background: `url(${page?.frontmatter?.cover})` }">
+  <a v-if="page" :href="cleanLink(page?.url)" :style="{ background: `url(${page?.frontmatter?.cover})` }">
     <div>
       <slot></slot>
       <h3>{{ page?.frontmatter?.title }}</h3>

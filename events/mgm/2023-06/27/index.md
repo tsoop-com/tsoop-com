@@ -2,7 +2,7 @@
 title: MGM#27
 description: Live acoustic sound explorations
 date: 2023-06-29
-cover: flutes.jpg
+cover: cover.jpg
 ---
 
 <youtube-embed video="zasQrzoVr1c"></youtube-embed>

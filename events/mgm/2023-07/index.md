@@ -1,7 +1,7 @@
 ---
 title: July 2023
 date: 2023-06-01
-cover: ./23/cover.jpeg
+cover: ./cover.jpg
 ---
 
 Music geeks community growing in July!
