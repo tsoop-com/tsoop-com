@@ -1,6 +1,6 @@
 ---
-title: July 2023
-date: 2023-07-01
+title: August 2023
+date: 2023-08-01
 cover: ./cover.jpg
 ---
 
