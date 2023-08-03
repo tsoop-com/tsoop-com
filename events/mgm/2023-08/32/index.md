@@ -15,7 +15,7 @@ Smooth live stream of us jamming is here: https://youtube.com/live/FfhZ6RW086s. 
 
 We also battle tested our new wireless in-ear monitoring system - just ran 3 kits of headphones through it. It opens huge possibilities for jamming with live instruments and while staying locked and synced. And there's so much to explore!
 
-See you at Pirate Bay, Phuket. Next Thursday at 7 PM. You can bring your instruments or played shared ones. See you! ✨
+You can come to Pirate Bay, Phuket. Next Thursday at 7 PM. Bring your instruments or played shared ones. See you! ✨
 
 ## Live stream
 
