@@ -1,8 +1,24 @@
 ---
 title: MGM#34
-desctiption: Keep coming!
+desctiption: Summarizing the experience
 date: 2023-08-17
 cover: cover.jpg
 ---
 
-See you in Pirate Bay next Thursday at 7 PM!
+<youtube-embed video="w2HpLbDBrtE"/>
+
+This moment was inevitably coming and we already can see it from today. The almost uninterrupted row of meetups is coming to the turning point. August 2023 is the last month Pirate Bay Phuket exists as a place to host free and open events. Quite rural island, especially during low tourist season can't compete with vivid Asian cities. Glenn, who mafe Pirate Bay possible, moves on with other projects in different places of the world.  It's time to collect all the experience we've gained with all these weekly gatherings and take it further.
+
+It may be an end for a FabLab, but Chromatone is just at the very start! There are so many features to add and bugs to fix in the Chromatone web-site code base. These so much to teach, to learn and to explore with visual music language!  And there are so many people to reach out and get well with. There are ideas and plans on how to move on with our Music Geeks Meetups in other spaces. Let's see how it turns out!
+
+This a bit longer recap was shot at once and then edited by our new member - Alex, a visual artist, who can appreciate the use of color as a means to get deep into music. It's so cool to see how music inspires visual creativity and vice versa. And it's the main case for Chromatone - to be a way to get on the same musical page for people of completely different levels of knowledge and skill.
+
+I tried to summarize the way these 34 meetups appeared for me and all the guests, who could get to Pirate Bay in these Thursday nights. It's a pleasure to have a 3 hour meeting with other people interested in deep music explorations.
+
+First hour to set and tune everything up and get in a proper mood. Share ideas and explorations. And discuss upcoming music. Yes, from 8 PM the jam starts and people start exploring all the possibilities to make pleasant sounds together. Free exchange of motifs, grooves and progressions. Nice time to share instruments and explore new territories.
+
+The second part passes in no time! Everyone easily gets involved into music and just loses any sense of time. Very soon the quest is not how to start, but how to modulate and stop the jamming process. But there's more! Once revealed, new improvised moves may find their place in a more structured performances of the final third part of the meetup. It's purpose is to make something, that has a distinct form. A beginning and an end. A verse, a bridge, a chorus. A modulation or a dance. No actual limits are imposed. Just creative bounds to make room for everyone!
+
+Last 15 minutes are for the recap - shooting it on air. It's a way to fix the trace of all the emotions and joy that was experienced together. To share the knowledge with others in space and time. And to share music!
+
+There's so much more to explore in this format and techniques. Let's see how it goes next! See you again!
