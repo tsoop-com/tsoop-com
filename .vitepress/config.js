@@ -23,6 +23,9 @@ const links = []
 
 
 export default defineConfig({
+  sitemap: {
+    hostname: 'https://tsoop.com'
+  },
   lastUpdated: true,
   title: meta.title,
   description: meta.description,
@@ -63,23 +66,16 @@ export default defineConfig({
       ['meta', { name: 'twitter:image', content: meta.url + image }],
     ]
   },
+  transformPageData(pageData) {
+    if (pageData.frontmatter.dynamic) {
+      pageData.frontmatter = { ...pageData.frontmatter, ...pageData.params, cover: 'https://db.chromatone.center/assets/' + pageData.params?.cover }
+    }
+  },
   transformHtml: (_, id, { pageData }) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        // you might need to change this if not using clean urls mode
-        url: pageData.relativePath?.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData?.lastUpdated,
-        changefreq: 'weekly'
-      })
+
   },
   buildEnd: async ({ outDir }) => {
-    //SECTION - Sitemap
-    const sitemap = new SitemapStream({ hostname: meta.url })
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
+
   }
 })
 

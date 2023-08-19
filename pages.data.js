@@ -1,9 +1,10 @@
 import { createContentLoader } from 'vitepress'
-
+import fs from 'fs'
 import VPMedia from 'vitepress-pages/media'
 
 
-export default createContentLoader('./**/*/*.md', {
+const content = createContentLoader('./**/*/*.md', {
+  includeSrc: true,
   transform: VPMedia({
     root: new URL('./', import.meta.url),
     mediaTypes: {
@@ -11,3 +12,6 @@ export default createContentLoader('./**/*/*.md', {
     }
   })
 })
+
+export default content
+

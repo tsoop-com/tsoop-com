@@ -1,6 +1,6 @@
 ---
 title: MGM#32
-desctiption: Jamming wirelessly with Tom and Gift
+description: Jamming wirelessly with Tom and Gift
 date: 2023-08-03
 cover: cover.jpg
 ---

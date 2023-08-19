@@ -28,7 +28,7 @@ function scrollToTop() {
 }
 
 const date = useDateFormat(
-  () => page.value?.frontmatter?.date,
+  () => frontmatter.value?.date,
   "DD MMMM YYYY, dddd"
 );
 
@@ -47,7 +47,7 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
 
     transition(name="fade" mode="out-in")
       .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden(
-        :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%`, height: !page?.frontmatter?.cover ? '90px':'40vh' }"
+        :style="{background:`url(${frontmatter?.cover}) no-repeat center/100%`, height: !frontmatter?.cover ? '90px':'40vh' }"
         :key="page?.url")
 
     button.p-4.fixed.top-2.right-0.z-10.opacity-50.hover-opacity-100.transition(
@@ -55,10 +55,13 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
       @click="toggle()")
       .i-la-expand
 
-    .p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.sticky.top-14.z-20.flex.flex-wrap.items-center.gap-2(v-if="page?.frontmatter")
-      .text-2xl.font-bold {{ page?.frontmatter?.title }}
-      .text-md {{ page?.frontmatter?.description  }}
-      .text-sm.opacity-60 {{ date }}
+    .p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.sticky.top-14.z-20.flex.flex-col.justify-center.gap-2(v-if="page?.frontmatter")
+      .text-2xl.font-bold {{ frontmatter?.title }}
+      .text-md {{ frontmatter?.description  }}
+      .flex.flex-wrap.text-sm.opacity-60.gap-1
+        span(v-if="frontmatter?.start_time") {{ frontmatter?.start_time?.slice(0,-3) }},  
+        span {{ date }}
+        span(v-if="frontmatter?.place") @ {{ frontmatter?.place?.title }}
 
   content.content.bg-dark-300(
     :class="{ full: isFullscreen }"
