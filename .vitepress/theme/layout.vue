@@ -41,7 +41,7 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
 .page.relative.flex.flex-col.min-h-100vh.gap-4
 
   template(v-if="!frontmatter.home")
-    nav#parents.flex.flex-wrap.sticky.top-0.z-10.bg-dark-200.bg-opacity-50.backdrop-blur-lg(aria-label="parents")
+    nav#parents.flex.flex-wrap.z-10.bg-dark-200.bg-opacity-50.backdrop-blur-lg(aria-label="parents")
       a.font-mono(href="/" @click="scrollToTop()") tsoop
       a.p-2.text-sm.sm-text-lg(v-for="parent in parents.slice(0, -1)", :key="parent", :href="parent?.url") {{ parent?.frontmatter?.title }}
 
@@ -55,15 +55,16 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
       @click="toggle()")
       .i-la-expand
 
-    .p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.sticky.top-14.z-20.flex.flex-col.justify-center.gap-2(v-if="page?.frontmatter")
+    .mx-4.max-w-55ch.p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.z-20.flex.flex-col.justify-center.gap-2(v-if="frontmatter")
       .text-2xl.font-bold {{ frontmatter?.title }}
       .text-md {{ frontmatter?.description  }}
       .flex.flex-wrap.text-sm.opacity-60.gap-1
         span(v-if="frontmatter?.start_time") {{ frontmatter?.start_time?.slice(0,-3) }},  
         span {{ date }}
         span(v-if="frontmatter?.place") @ {{ frontmatter?.place?.title }}
-
-  content.content.bg-dark-300(
+  .mx-4.max-w-55ch
+    youtube-embed(v-if="frontmatter?.youtube_video" :video="`${frontmatter?.youtube_video}`")
+  content.mx-4.content.bg-dark-300(
     :class="{ full: isFullscreen }"
     ref="container")
 

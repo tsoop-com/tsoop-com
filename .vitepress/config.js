@@ -68,7 +68,7 @@ export default defineConfig({
   },
   transformPageData(pageData) {
     if (pageData.frontmatter.dynamic) {
-      pageData.frontmatter = { ...pageData.frontmatter, ...pageData.params, cover: 'https://db.chromatone.center/assets/' + pageData.params?.cover }
+      pageData.frontmatter = { ...pageData.frontmatter, ...pageData.params, cover: pageData.params?.cover ? 'https://db.chromatone.center/assets/' + pageData.params?.cover : '' }
     }
   },
   transformHtml: (_, id, { pageData }) => {

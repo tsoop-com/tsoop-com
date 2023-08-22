@@ -146,7 +146,6 @@ openSource:
 ---
 
 <script setup>
-import EventRow from './events/EventRow.vue'
 import ExpVisuals from './exp/ExpVisuals.vue'
 </script>
 
@@ -157,8 +156,6 @@ import ExpVisuals from './exp/ExpVisuals.vue'
 <links color="#709c65" class="text-4xl py-16 row" :links="$frontmatter.mainLinks" />
 
 <about-us class="row" />
-
-<event-row folder="/events/mgm/" />
 
 <video-row :list="$frontmatter.openSource.video" />
 
@@ -189,4 +186,3 @@ import ExpVisuals from './exp/ExpVisuals.vue'
 <contact-me />
 
 <exp-visuals />
-
