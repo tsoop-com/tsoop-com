@@ -1,5 +1,5 @@
 <template lang="pug">
-.row.min-h-100vh(ref="target")
+.min-h-100vh.flex.flex-wrap.items-center.bg-dark-400.py-8.sm_py-16.shadow-2xl(ref="target")
   a.panel(href="https://chromatone.center",target="_blank")
     img.m-4(src="/img/holologo.svg")
   .panel(v-if="targetIsVisible || loaded")
@@ -35,11 +35,11 @@ watch(targetIsVisible, t => {
 
 <style scoped>
 .row {
-  @apply flex flex-wrap items-center bg-light-900 py-8 sm_py-16 shadow-2xl;
+  @apply ;
 }
 
 .panel {
-  @apply text-dark-300 py-2 flex flex-col text-start;
+  @apply py-2 flex flex-col text-start;
   flex: 1 1 300px;
 }
 </style>

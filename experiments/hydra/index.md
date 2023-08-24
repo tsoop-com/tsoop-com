@@ -1,6 +1,7 @@
 ---
 title: Hydra synth
 subtitle: Experiment with visual synth
+cover: cover.png
 ---
 
 <script setup>

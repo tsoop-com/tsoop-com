@@ -10,8 +10,8 @@ declare module 'vue' {
     About: typeof import('./components/about.vue')['default']
     AboutUs: typeof import('./components/about-us.vue')['default']
     AlbumRow: typeof import('./components/album-row.vue')['default']
+    BrowseContent: typeof import('./components/BrowseContent.vue')['default']
     ChromaTone: typeof import('./components/ChromaTone.vue')['default']
-    ContactMe: typeof import('./components/ContactMe.vue')['default']
     JamDeezerCircle: typeof import('~icons/jam/deezer-circle')['default']
     LaAmazon: typeof import('~icons/la/amazon')['default']
     LaApple: typeof import('~icons/la/apple')['default']
@@ -32,7 +32,7 @@ declare module 'vue' {
     TopHead: typeof import('./components/top-head.vue')['default']
     TopLogo: typeof import('./components/TopLogo.vue')['default']
     UilBoombox: typeof import('~icons/uil/boombox')['default']
-    VideoRow: typeof import('./components/video-row.vue')['default']
+    VideoRow: typeof import('./components/VideoRow.vue')['default']
     YoutubeEmbed: typeof import('./components/youtube-embed.vue')['default']
   }
 }

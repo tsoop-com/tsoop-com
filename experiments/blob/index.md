@@ -1,5 +1,7 @@
 ---
-title: blob
+title: Blob
+description: Three JS morphing blob
+cover: cover.png
 links:
   - https://codepen.io/aaroniker/pen/YoqNRB
 attractor: https://codepen.io/strangerintheq/pen/bGqKpvJ
