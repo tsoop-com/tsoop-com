@@ -53,7 +53,7 @@ export default defineConfig({
       image = 'media_files/cover/' + url.split('/').join('-') + ctx.pageData.frontmatter?.cover
     }
     return [
-      process.env.NODE_ENV === "production" ? ["script", { async: true, defer: true, "data-website-id": "4d8a9e31-89cc-4bbd-a3b2-ac894e893b56", src: "https://stats.chromatone.center/script.js" }] : null
+      process.env.NODE_ENV === "production" ? ["script", { async: true, defer: true, "data-website-id": "4d8a9e31-89cc-4bbd-a3b2-ac894e893b56", src: "https://stats.chromatone.center/script.js" }] : null,
       ['meta', { property: 'og:title', content: ctx.pageData.title + ' | tsoop.com' }],
       ['meta', { property: 'og:description', content: ctx.pageData.description }],
       ['meta', { property: 'og:url', content: meta.url + url }],
