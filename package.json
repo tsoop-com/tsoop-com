@@ -23,7 +23,7 @@
 		"serve": "vitepress serve --port 3012 --host"
 	},
 	"dependencies": {
-		"@unocss/reset": "^0.58.5",
+		"@unocss/reset": "^0.58.7",
 		"@vueuse/core": "^10.9.0",
 		"@vueuse/gesture": "^2.0.0",
 		"@vueuse/math": "^10.9.0",
@@ -47,18 +47,18 @@
 		"zdog": "^1.1.3"
 	},
 	"devDependencies": {
-		"@directus/sdk": "^15.0.2",
-		"@iconify/json": "^2.2.190",
+		"@directus/sdk": "^15.0.3",
+		"@iconify/json": "^2.2.196",
 		"@types/color-hash": "^1.0.5",
-		"@unocss/extractor-pug": "^0.58.5",
-		"@vue/language-plugin-pug": "^2.0.6",
+		"@unocss/extractor-pug": "^0.58.7",
+		"@vue/language-plugin-pug": "^2.0.7",
 		"pug": "^3.0.2",
 		"sitemap": "^7.1.1",
-		"typescript": "^5.4.2",
-		"unocss": "^0.58.5",
+		"typescript": "^5.4.3",
+		"unocss": "^0.58.7",
 		"unplugin-icons": "^0.18.5",
 		"unplugin-vue-components": "^0.26.0",
-		"vite": "^5.1.5",
-		"vitepress": "^1.0.0-rc.45"
+		"vite": "^5.1.7",
+		"vitepress": "^1.0.1"
 	}
 }
