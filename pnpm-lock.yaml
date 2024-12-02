@@ -51,8 +51,8 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       three:
-        specifier: ^0.171.0
-        version: 0.171.0
+        specifier: 0.153.0
+        version: 0.153.0
       tone:
         specifier: ^15.0.4
         version: 15.0.4
@@ -3846,8 +3846,8 @@ packages:
   thousands-counter@2.1.1:
     resolution: {integrity: sha512-yUesewbf9UBHi7C7fhm3VrPD1i2S7Y4PikgKW2JblgTGAEF1hvcBLzKiahlnkMoNbyMPHzGns5Khj2Td3sT3PA==}
 
-  three@0.171.0:
-    resolution: {integrity: sha512-Y/lAXPaKZPcEdkKjh0JOAHVv8OOnv/NDJqm0wjfCzyQmfKxV7zvkwsnBgPBKTzJHToSOhRGQAGbPJObT59B/PQ==}
+  three@0.153.0:
+    resolution: {integrity: sha512-OCP2/uQR6GcDpSLnJt/3a4mdS0kNWcbfUXIwLoEMgLzEUIVIYsSDwskpmOii/AkDM+BBwrl6+CKgrjX9+E2aWg==}
 
   tiny-emitter@2.1.0:
     resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
@@ -6043,7 +6043,7 @@ snapshots:
 
   '@vueuse/shared@9.11.1(vue@3.5.13(typescript@5.7.2))':
     dependencies:
-      vue-demi: 0.14.7(vue@3.5.13(typescript@5.7.2))
+      vue-demi: 0.14.10(vue@3.5.13(typescript@5.7.2))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -8492,7 +8492,7 @@ snapshots:
 
   thousands-counter@2.1.1: {}
 
-  three@0.171.0: {}
+  three@0.153.0: {}
 
   tiny-emitter@2.1.0: {}
 

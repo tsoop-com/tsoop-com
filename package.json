@@ -38,7 +38,7 @@
 		"poly-decomp": "^0.3.0",
 		"regl": "^2.1.1",
 		"simplex-noise": "^4.0.3",
-		"three": "^0.171.0",
+		"three": "0.153.0",
 		"tone": "^15.0.4",
 		"use-chromatone": "^2.9.9",
 		"vitepress-pages": "^2.0.1",
