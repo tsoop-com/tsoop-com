@@ -1,8 +1,12 @@
 {
   "include": [
     "./**/*.vue",
+    "./**/*.js",
   ],
   "vueCompilerOptions": {
+    "vitePressExtensions": [
+      ".md"
+    ],
     "plugins": [
       "@vue/language-plugin-pug"
     ]
