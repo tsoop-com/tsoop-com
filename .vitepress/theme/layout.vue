@@ -1,15 +1,14 @@
 <script setup>
 import { computed, ref } from "vue";
+import { useData, useRoute } from "vitepress";
+import { cleanLink, usePages } from "vitepress-pages";
+import { useDateFormat, useFullscreen } from "@vueuse/core";
+
+import { data } from "../../pages.data.js";
 
 // IDK why is there an error of unused createCommentVNode, but this is a temporary fix
 import { createCommentVNode } from "vue";
 createCommentVNode();
-
-import { useData, useRoute } from "vitepress";
-import { data } from "../../pages.data.js";
-import { cleanLink, usePages } from "vitepress-pages";
-
-import { useDateFormat, useFullscreen } from "@vueuse/core";
 
 const { frontmatter } = useData();
 
@@ -59,7 +58,6 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
       .text-md {{ frontmatter?.description  }}
       .flex.flex-wrap.text-sm.opacity-60.gap-1
         span(v-if="frontmatter?.start_time") {{ frontmatter?.start_time?.slice(0,-3) }},  
-        span {{ date }}
         span(v-if="frontmatter?.place") @ {{ frontmatter?.place?.title }}
   .mx-4.max-w-55ch
     youtube-embed(v-if="frontmatter?.youtube_video" :video="`${frontmatter?.youtube_video}`")

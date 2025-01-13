@@ -7,9 +7,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    About: typeof import('./components/about.vue')['default']
-    AboutUs: typeof import('./components/about-us.vue')['default']
-    AlbumRow: typeof import('./components/album-row.vue')['default']
+    About: typeof import('./components/About.vue')['default']
+    AboutUs: typeof import('./components/AboutUs.vue')['default']
+    AlbumRow: typeof import('./components/AlbumRow.vue')['default']
     BrowseContent: typeof import('./components/BrowseContent.vue')['default']
     ChromaTone: typeof import('./components/ChromaTone.vue')['default']
     JamDeezerCircle: typeof import('~icons/jam/deezer-circle')['default']
@@ -26,13 +26,13 @@ declare module 'vue' {
     LaVk: typeof import('~icons/la/vk')['default']
     LaYandex: typeof import('~icons/la/yandex')['default']
     LaYoutube: typeof import('~icons/la/youtube')['default']
-    LinkButton: typeof import('./components/link-button.vue')['default']
-    Links: typeof import('./components/links.vue')['default']
-    NavCard: typeof import('./.vitepress/theme/components/NavCard.vue')['default']
-    TopHead: typeof import('./components/top-head.vue')['default']
+    LinkButton: typeof import('./components/LinkButton.vue')['default']
+    Links: typeof import('./components/Links.vue')['default']
+    NavCard: typeof import('./components/NavCard.vue')['default']
+    TopHead: typeof import('./components/TopHead.vue')['default']
     TopLogo: typeof import('./components/TopLogo.vue')['default']
     UilBoombox: typeof import('~icons/uil/boombox')['default']
     VideoRow: typeof import('./components/VideoRow.vue')['default']
-    YoutubeEmbed: typeof import('./components/youtube-embed.vue')['default']
+    YoutubeEmbed: typeof import('./components/YoutubeEmbed.vue')['default']
   }
 }

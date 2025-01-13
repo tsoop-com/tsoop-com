@@ -2,6 +2,7 @@
   "include": [
     "./**/*.vue",
     "./**/*.js",
+    "./**/*.md",
   ],
   "vueCompilerOptions": {
     "vitePressExtensions": [

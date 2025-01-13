@@ -5,10 +5,9 @@ mainLinks:
   instagram: https://www.instagram.com/tsoop.music
   bandcamp: https://tsoop.bandcamp.com/
   github: https://github.com/tsoop-com
-  youtube: https://www.youtube.com/@tsoop 
+  youtube: https://www.youtube.com/@tsoop
   spotify: https://open.spotify.com/artist/0y3vCTnY6F5UROyBnOAPuF?si=TTC8BaneT0egl9Ek9Z11Hw
   apple: https://music.apple.com/us/artist/tsoop/1473343646
-
 ---
 
 <script setup>
