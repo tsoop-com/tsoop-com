@@ -42,3 +42,7 @@ body {
 		transform: translateY(0);
 	}
 }
+
+audio {
+	@apply w-full p-1 bg-dark-200 shadow-lg rounded-xl overflow-hidden;
+}

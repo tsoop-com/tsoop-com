@@ -1,7 +1,7 @@
 ---
 title: Sessions
 description: Live improvisation recordings, aiming to catch the moment
-date: 2025-01-12
+date: 2023-06-30
 cover: tech.jpg
 ---
 
