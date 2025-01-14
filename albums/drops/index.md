@@ -4,6 +4,15 @@ title: drops
 description: Colorful blobs moving freely in the unlimited space
 date: 2023-08-23
 cover: screen.png
+videos:
+  title: drops
+  list:
+    - _qNixUQ2ka8
+    - XolLvOAoejo
+    - SoT7O82cjWA
+    - F_55F__x-SI
+    - h-Vwh9Jhr88
+    - _p0WiIEkknQ
 albums:
   drops:
     title: drops
@@ -13,12 +22,6 @@ albums:
     cover: /img/drops.jpg
     background: "#b77fb0"
     released: 20.10.2020
-    video:
-      - _qNixUQ2ka8
-      - XolLvOAoejo
-      - SoT7O82cjWA
-      - F_55F__x-SI
-      - h-Vwh9Jhr88
     links:
       spotify: https://open.spotify.com/album/2NDJPHtTYKTxaGEbROyCTu?si=zMtr_Bw-TmKTC1QoB61AOw
       apple: https://music.apple.com/ru/album/drops/1540753447
@@ -36,3 +39,5 @@ const { frontmatter } = useData()
 </script>
 
 <album-row :album="frontmatter.albums.drops" />
+
+<video-row v-bind="frontmatter.videos" />

@@ -3,6 +3,11 @@ title: spring steam
 description: shades of blooming flowers, melting ice and sounds of our souls’ inner strings
 cover: spring.jpg
 date: 2023-08-23
+spring:
+  title: Spring Steam
+  list:
+    - Vwt57rGZUWg
+    - ZwuDowhVtaI
 albums:
   spring:
     title: spring steam
@@ -22,3 +27,5 @@ const { frontmatter } = useData()
 </script>
 
 <album-row :album="frontmatter.albums.spring" />
+
+<video-row v-bind="frontmatter.spring" />
