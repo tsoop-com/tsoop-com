@@ -82,7 +82,7 @@ export default defineConfig({
     },
     plugins: [
       Components({
-        dirs: ['.vitepress/theme/components', 'components'],
+        dirs: ['.vitepress/components'],
         extensions: ['vue', 'ts'],
         directoryAsNamespace: true,
         collapseSamePrefixes: true,

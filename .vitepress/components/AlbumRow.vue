@@ -1,3 +1,25 @@
+<script setup>
+import { ref, watch } from 'vue'
+import { useElementVisibility } from '@vueuse/core'
+
+const target = ref(null)
+const loaded = ref(false)
+const targetIsVisible = useElementVisibility(target)
+
+watch(targetIsVisible, t => {
+  if (t) loaded.value = true
+})
+
+
+const props = defineProps({
+  album: {
+    type: Object,
+    default: {}
+  }
+});
+
+</script>
+
 <template lang="pug">
 .row.min-h-100vh(
   :id="album.title.split(' ').join('-')"
@@ -20,28 +42,6 @@
     a.text-light-100.mt-8.mr-auto.ml-4(:href="album.link" v-if="album?.link" target="_blank") {{ album.link }}
     links.text-3xl.py-8(:links="album.links" v-if="album?.links")
 </template>
-
-<script setup>
-import { ref, watch } from 'vue'
-import { useElementVisibility } from '@vueuse/core'
-
-const target = ref(null)
-const loaded = ref(false)
-const targetIsVisible = useElementVisibility(target)
-
-watch(targetIsVisible, t => {
-  if (t) loaded.value = true
-})
-
-
-const props = defineProps({
-  album: {
-    type: Object,
-    default: {}
-  }
-});
-
-</script>
 
 <style scoped lang="postcss">
 .panel {
