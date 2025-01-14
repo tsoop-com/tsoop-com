@@ -39,7 +39,7 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
 <template lang="pug">
 .page.relative.flex.flex-col.min-h-100vh.gap-4
 
-  template(v-if="!frontmatter.home")
+  template(v-if="!frontmatter.home && !frontmatter.full")
     nav#parents.flex.flex-wrap.z-10.bg-dark-200.bg-opacity-50.backdrop-blur-lg.items-center(aria-label="parents")
       a.font-mono.p-4(href="/" @click="scrollToTop()") tsoop
       a.p-2.text-sm.sm-text-lg(v-for="parent in parents.slice(0, -1)", :key="parent", :href="parent?.url") {{ parent?.frontmatter?.title }}
@@ -47,7 +47,7 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
     transition(name="fade" mode="out-in")
       .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden.h-100(
         :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%` }"
-        :key="page?.url")
+        :key="page?.url" )
     button.p-4.fixed.top-2.right-0.z-10.opacity-50.hover-opacity-100.transition(
       v-if="isSupported"
       @click="toggle()")

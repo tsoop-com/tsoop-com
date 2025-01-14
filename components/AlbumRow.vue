@@ -6,7 +6,7 @@
 )
   .panel
     img.rounded-xl(:class="{ [album.coverClass]: true }",:src="album.cover")
-  .panel(v-if="targetIsVisible || loaded")
+  .panel
     .bandcamp.w-full.flex.flex-col
       a.text-4xl.text-bold.px-4(:href="`#${album.title.split(' ').join('-')}`") {{ album.title }}
       .text-lg.text-light-100.p-4 {{ album.description }}
@@ -16,9 +16,9 @@
         loading="lazy"
         seamless
         ) 
-        a(:href="album.links.bandcamp") {{album.title}} by tsoop
+        a(:href="album?.links?.bandcamp") {{ album?.title }} by tsoop
     a.text-light-100.mt-8.mr-auto.ml-4(:href="album.link" v-if="album?.link" target="_blank") {{ album.link }}
-    links.text-3xl.py-8(:links="album.links")
+    links.text-3xl.py-8(:links="album.links" v-if="album?.links")
 </template>
 
 <script setup>
@@ -30,7 +30,7 @@ const loaded = ref(false)
 const targetIsVisible = useElementVisibility(target)
 
 watch(targetIsVisible, t => {
-  loaded.value = true
+  if (t) loaded.value = true
 })
 
 
@@ -42,7 +42,7 @@ const props = defineProps({
 });
 
 </script>
-  
+
 <style scoped lang="postcss">
 .panel {
   @apply flex flex-col items-center justify-center p-2 sm_p-8;
