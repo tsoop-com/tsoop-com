@@ -1,5 +1,4 @@
 import { createContentLoader } from 'vitepress'
-import fs from 'fs'
 import VPMedia from 'vitepress-pages/media'
 
 
