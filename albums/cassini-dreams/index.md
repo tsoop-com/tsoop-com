@@ -1,6 +1,6 @@
 ---
 title: Cassini Dreams
-description: Tribute to the Cassini-Huygnes Saturn exploration space mission
+description: Tribute to the Cassini-Huygnes Saturn exploration space mission (2017)
 date: 2017-09-01
 full: true
 cover: saturn.jpg

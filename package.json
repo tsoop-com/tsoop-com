@@ -18,9 +18,8 @@
 	"type": "module",
 	"packageManager": "pnpm@9.14.2",
 	"scripts": {
-		"build": "vitepress build ",
-		"deploy": "sh deploy.sh",
 		"dev": "vitepress dev --port 3011 --host",
+		"build": "vitepress build ",
 		"serve": "vitepress serve --port 3012 --host"
 	},
 	"dependencies": {

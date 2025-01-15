@@ -1,9 +1,12 @@
 ---
 title: Wabi-Sabi
-description: Two track EP about time, necessity and worth
+description: Two track EP about time, necessity and worth. Live performed at Bohemia, Phuket (2024)
 date: 2024-12-05
 full: true
+cover: wabi-sabi-cover.jpg
 ---
+
+![](./wabi-sabi-cover.jpg)
 
 ## Wabi
 

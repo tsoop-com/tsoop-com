@@ -40,20 +40,17 @@ const { isSupported, toggle, isFullscreen } = useFullscreen(container);
 .page.relative.flex.flex-col.min-h-100vh.gap-4
 
   template(v-if="!frontmatter.home && !frontmatter.full")
-    nav#parents.flex.flex-wrap.z-10.bg-dark-200.bg-opacity-50.backdrop-blur-lg.items-center(aria-label="parents")
-      a.font-mono.p-4(href="/" @click="scrollToTop()") tsoop
-      a.p-2.text-sm.sm-text-lg(v-for="parent in parents.slice(0, -1)", :key="parent", :href="parent?.url") {{ parent?.frontmatter?.title }}
+
 
     transition(name="fade" mode="out-in")
       .opacity-50.hover-opacity-100.transition.z-0.overflow-hidden.h-100(
         :style="{background:`url(${page?.frontmatter?.cover}) no-repeat center/100%` }"
         :key="page?.url" )
-    button.p-4.fixed.top-2.right-0.z-10.opacity-50.hover-opacity-100.transition(
-      v-if="isSupported"
-      @click="toggle()")
-      .i-la-expand
 
     .mx-4.max-w-55ch.p-4.bg-dark-500.bg-opacity-60.backdrop-blur-md.-mt-20.z-20.flex.flex-col.justify-center.gap-2(v-if="frontmatter")
+      nav#parents.font-mono.flex.flex-wrap.gap-4.items-baseline(aria-label="parents")
+        a.p-1(href="/" @click="scrollToTop()") tsoop
+        a.p-1(v-for="parent in parents.slice(0, -1)", :key="parent", :href="parent?.url") {{ parent?.frontmatter?.title }}
       .text-2xl.font-bold {{ frontmatter?.title }}
       .text-md {{ frontmatter?.description  }}
       .flex.flex-wrap.text-sm.opacity-60.gap-1

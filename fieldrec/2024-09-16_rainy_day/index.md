@@ -2,7 +2,7 @@
 title: Rainy Day in Kathu
 description: My house sounds on a rainy day
 date: 2024-09-16
-cover: inge-maria.jpg
+cover: rainy-day.jpg
 layout: event
 ---
 

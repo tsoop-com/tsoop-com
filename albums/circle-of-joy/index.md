@@ -1,6 +1,6 @@
 ---
 title: Circle of Joy & Remix Collab
-description: Released music
+description: Project approach developed at OOLEY and implemented at LOM creative camp in a condensed form of a song and a remix collaboration (2021)
 date: 2022-09-16
 cover: circle.jpg
 full: true

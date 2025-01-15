@@ -1,7 +1,7 @@
 ---
 title: Daria Tishina collaborations
-description: Released music
-date: 2022-09-16
+description: Poetry and electronic improvisation meet in sweet spot (2019-2022)
+date: 2019-07-17
 cover: exit.jpg
 full: true
 albums:

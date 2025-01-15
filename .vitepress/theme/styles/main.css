@@ -44,5 +44,5 @@ body {
 }
 
 audio {
-	@apply w-full p-1 bg-dark-200 shadow-lg rounded-xl overflow-hidden;
+	@apply w-full p-2 bg-dark-100 shadow-lg rounded-xl overflow-hidden max-w-55ch;
 }

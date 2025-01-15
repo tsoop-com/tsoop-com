@@ -1,8 +1,8 @@
 ---
 full: true
 title: drops
-description: Colorful blobs moving freely in the unlimited space
-date: 2023-08-23
+description: Colorful blobs moving freely in the unlimited space (2020)
+date: 2020-10-20
 cover: screen.png
 videos:
   title: drops
