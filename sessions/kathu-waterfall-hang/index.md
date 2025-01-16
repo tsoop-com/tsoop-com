@@ -5,6 +5,8 @@ date: 2023-04-25
 cover: waterfall.jpg
 ---
 
+![Photo of the waterfall and guys with instruments](./tony-andy-alex-den.jpg)
+
 <audio controls>
   <source src="https://db.chromatone.center/assets/c4e9983d-e7e4-4b8b-bb44-e4d5d39adcb4/waterfall1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
