@@ -1,5 +1,5 @@
 ---
-title: Handpan session on Kathu Waterfall
+title: Handpan session at Kathu Waterfall
 description: Jungle life, water flowing and handpan played by Tony
 date: 2023-04-25
 cover: waterfall.jpg
