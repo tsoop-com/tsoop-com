@@ -1,5 +1,5 @@
 ---
-title: Parade of Planets at Theo's
+title: Parade of Planets at Theo's place
 description: A friendly potluck dinner party leading into a wonderful drum jam session
 date: 2025-01-21
 cover: sesh.jpeg
