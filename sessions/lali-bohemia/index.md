@@ -1,6 +1,6 @@
 ---
-title: Bohemia Jam with Lali
-description: Deep bass, sharp rhythms and expressive vocals
+title: Inner Voice Jam with Lali
+description: Deep bass, sharp rhythms and expressive vocals @ Bohemia
 date: 2025-08-14
 layout: event
 cover: cover.jpg
@@ -20,10 +20,10 @@ cover: cover.jpg
   <source src="https://db.chromatone.center/assets/13401585-2d40-43ad-abbd-d3248a32a731/fist_bump.mp3" type="audio/mpeg">
 </audio>
 
-## Listen Up
+## Inner Voice
 
 <audio controls>
-  <source src="https://db.chromatone.center/assets/2f66f46f-490e-41ac-83f7-70e9304e8f20/listen_up.mp3" type="audio/mpeg">
+  <source src="https://db.chromatone.center/assets/2f66f46f-490e-41ac-83f7-70e9304e8f20/Inner_voice.mp3" type="audio/mpeg">
 </audio>
 
 ## Good Night
